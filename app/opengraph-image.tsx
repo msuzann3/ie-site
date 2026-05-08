@@ -49,6 +49,7 @@ export default async function Image() {
             height: '500px',
             borderRadius: '50%',
             background: 'radial-gradient(circle, rgba(11,143,104,0.22) 0%, transparent 65%)',
+            display: 'flex',
           }}
         />
         {/* Azure glow — bottom left */}
@@ -61,41 +62,64 @@ export default async function Image() {
             height: '360px',
             borderRadius: '50%',
             background: 'radial-gradient(circle, rgba(96,165,250,0.10) 0%, transparent 65%)',
+            display: 'flex',
           }}
         />
 
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span style={{ color: 'white', fontSize: '26px', fontWeight: 400, letterSpacing: '-0.5px' }}>
-            I<span style={{ color: '#0B8F68' }}>+</span>E
-          </span>
-          <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '18px', margin: '0 4px' }}>·</span>
-          <span style={{ color: 'white', fontSize: '22px', fontWeight: 400, letterSpacing: '-0.3px' }}>
-            Innovate{' '}
+          <div style={{ display: 'flex', alignItems: 'center', color: 'white', fontSize: '26px', fontWeight: 400, letterSpacing: '-0.5px' }}>
+            <span>I</span>
             <span style={{ color: '#0B8F68' }}>+</span>
-            {' '}Elevate
-          </span>
+            <span>E</span>
+          </div>
+          <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '18px', margin: '0 4px' }}>·</span>
+          <div style={{ display: 'flex', alignItems: 'center', color: 'white', fontSize: '22px', fontWeight: 400, letterSpacing: '-0.3px' }}>
+            <span>Innovate</span>
+            <span style={{ color: '#0B8F68', margin: '0 6px' }}>+</span>
+            <span>Elevate</span>
+          </div>
         </div>
 
         {/* Main content */}
         <div style={{ display: 'flex', flexDirection: 'column', marginTop: 'auto', gap: '20px' }}>
-          <div
-            style={{
-              fontSize: '60px',
-              fontWeight: 400,
-              color: 'white',
-              letterSpacing: '-2px',
-              lineHeight: 1.06,
-            }}
-          >
-            Innovate the{' '}
-            <span style={{ color: '#4DD4A8' }}>systems</span>.
-            {'\n'}
-            Elevate the{' '}
-            <span style={{ color: '#4DD4A8' }}>people</span>.
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'baseline',
+                fontSize: '60px',
+                fontWeight: 400,
+                color: 'white',
+                letterSpacing: '-2px',
+                lineHeight: 1.06,
+              }}
+            >
+              <span>Innovate the&nbsp;</span>
+              <span style={{ color: '#4DD4A8' }}>systems</span>
+              <span>.</span>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'baseline',
+                fontSize: '60px',
+                fontWeight: 400,
+                color: 'white',
+                letterSpacing: '-2px',
+                lineHeight: 1.06,
+              }}
+            >
+              <span>Elevate the&nbsp;</span>
+              <span style={{ color: '#4DD4A8' }}>people</span>
+              <span>.</span>
+            </div>
           </div>
           <div
             style={{
+              display: 'flex',
               fontSize: '22px',
               color: 'rgba(255,255,255,0.55)',
               fontWeight: 400,
@@ -110,6 +134,7 @@ export default async function Image() {
         {/* Domain */}
         <div
           style={{
+            display: 'flex',
             position: 'absolute',
             bottom: '52px',
             right: '72px',
