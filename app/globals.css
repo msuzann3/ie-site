@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #F8FAFC;
+    color: #0D1B35;
+  }
+
+  em {
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-body text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-3;
+  }
+
+  .section-title {
+    @apply font-display font-normal tracking-section leading-snug text-midnight mb-4;
+    font-size: clamp(32px, 4vw, 46px);
+  }
+
+  .section-desc {
+    @apply font-body text-base text-text-mid max-w-[540px] leading-relaxed font-light mb-[52px];
+  }
+
+  .btn-primary {
+    @apply inline-block bg-emerald hover:bg-emerald-mid text-white text-sm font-medium py-3.5 px-7 rounded-[32px] transition-colors duration-150;
+  }
+
+  .btn-ghost-dark {
+    @apply inline-block border border-white/20 hover:border-white/50 text-white/75 hover:text-white text-sm py-[13px] px-7 rounded-[32px] transition-all duration-150;
+  }
+
+  .speak-list {
+    @apply flex flex-col gap-px bg-midnight/[0.09] rounded-2xl overflow-hidden border border-midnight/[0.09];
+  }
+}
+
+/* Staggered animation delays for hero fade-up children */
+.hero-content > *:nth-child(1) { animation-delay: 0s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.3s; }
+
+/* Publication card hovers — variant-specific border accent */
+.pub-card {
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.pub-card:hover {
+  transform: translateY(-2px);
+}
+.pub-card-innovate:hover {
+  border-color: rgba(11,143,104,0.4) !important;
+}
+.pub-card-elevate:hover {
+  border-color: rgba(96,165,250,0.5) !important;
+}
+
+/* Person-page team card link hovers */
+.person-link-innovate {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.person-link-innovate:hover {
+  border-color: #0B8F68 !important;
+  background: rgba(11,143,104,0.15) !important;
+}
+.person-link-elevate {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.person-link-elevate:hover {
+  border-color: #60A5FA !important;
+  background: rgba(96,165,250,0.12) !important;
+}
+
+/* Person contact link hovers on dark bg */
+.contact-link-innovate:hover { color: #4DD4A8 !important; }
+.contact-link-elevate:hover  { color: #93C5FD !important; }
+
+/* Home team person-link hovers */
+.team-link-innovate {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.team-link-innovate:hover {
+  border-color: #0B8F68 !important;
+  background: rgba(11,143,104,0.15) !important;
+}
+.team-link-elevate {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.team-link-elevate:hover {
+  border-color: #60A5FA !important;
+  background: rgba(96,165,250,0.12) !important;
+}
+
+/* ── Responsive grids (non-standard column ratios) ── */
+
+/* PersonPage hero: text + portrait */
+.grid-person-hero {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .grid-person-hero { grid-template-columns: 1.4fr 1fr; gap: 80px; }
+}
+
+/* PersonPage bio: sidebar + body */
+.grid-bio {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .grid-bio { grid-template-columns: 280px 1fr; gap: 96px; }
+}
+
+/* Footer: brand + 3 link cols */
+.grid-footer {
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .grid-footer { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
+}
+
+/* Speaking row — home (date / event / location / speaker) */
+.speak-row-home {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .speak-row-home {
+    grid-template-columns: 110px 1fr 160px 110px;
+    gap: 28px;
+    align-items: center;
+  }
+}
+
+/* Speaking row — person page (date / event / location) */
+.speak-row-person {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .speak-row-person {
+    grid-template-columns: 110px 1fr 160px;
+    gap: 28px;
+    align-items: center;
+  }
+}
+
+/* PersonPage portrait: landscape on mobile, tall on desktop */
+.portrait-wrap {
+  aspect-ratio: 4/3;
+}
+@media (min-width: 768px) {
+  .portrait-wrap { aspect-ratio: 4/5; }
+}
