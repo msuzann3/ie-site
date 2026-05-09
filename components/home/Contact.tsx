@@ -1,5 +1,3 @@
-import ContactForm from './ContactForm'
-
 const CONTACT_INFO = [
   {
     icon: (
@@ -56,47 +54,43 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-silver px-5 py-16 md:px-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start"
+      className="bg-silver px-5 py-16 md:px-20 md:py-24 flex flex-col items-center text-center"
     >
-      <div>
-        <p className="eyebrow">Get in touch</p>
-        <h2
-          className="font-display font-normal text-midnight leading-snug tracking-section mb-4"
-          style={{ fontSize: 'clamp(28px, 4vw, 46px)' }}
-        >
-          Tell us what your
-          <br />
-          organization is wrestling with.
-        </h2>
-        <p className="text-base text-text-mid leading-relaxed font-light mb-8 max-w-[460px]">
-          No discovery decks, no qualifying calls. Send a note — we&apos;ll write back
-          within two business days with whether and how we can help.
-        </p>
+      <p className="eyebrow">Get in touch</p>
+      <h2
+        className="font-display font-normal text-midnight leading-snug tracking-section mb-4"
+        style={{ fontSize: 'clamp(28px, 4vw, 46px)' }}
+      >
+        Tell us what your
+        <br />
+        organization is wrestling with.
+      </h2>
+      <p className="text-base text-text-mid leading-relaxed font-light mb-10 max-w-[520px]">
+        No discovery decks, no qualifying calls. Send a note — we&apos;ll write back
+        within two business days with whether and how we can help.
+      </p>
 
-        <div className="flex flex-col gap-3">
-          {CONTACT_INFO.map((row) => (
-            <a
-              key={row.label}
-              href={row.href}
-              className="flex items-center gap-3 group"
-            >
-              <div className="w-8 h-8 rounded-[9px] bg-emerald-light flex-shrink-0 flex items-center justify-center text-emerald">
-                {row.icon}
-              </div>
-              <div>
-                <p className="text-[10px] tracking-[0.0625rem] uppercase font-semibold text-text-mid">
-                  {row.label}
-                </p>
-                <p className="text-[13px] text-midnight group-hover:text-emerald transition-colors duration-150 font-light">
-                  {row.value}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
+      <div className="flex flex-col gap-4 items-center w-full max-w-[400px]">
+        {CONTACT_INFO.map((row) => (
+          <a
+            key={row.label}
+            href={row.href}
+            className="flex items-center gap-3 group w-full"
+          >
+            <div className="w-8 h-8 rounded-[9px] bg-emerald-light flex-shrink-0 flex items-center justify-center text-emerald">
+              {row.icon}
+            </div>
+            <div className="text-left">
+              <p className="text-[10px] tracking-[0.0625rem] uppercase font-semibold text-text-mid">
+                {row.label}
+              </p>
+              <p className="text-[13px] text-midnight group-hover:text-emerald transition-colors duration-150 font-light">
+                {row.value}
+              </p>
+            </div>
+          </a>
+        ))}
       </div>
-
-      <ContactForm />
     </section>
   )
 }
