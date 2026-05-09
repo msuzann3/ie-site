@@ -8,6 +8,7 @@ import {
   Mail,
   Calendar,
   Mic,
+  Users,
   LucideProps,
 } from 'lucide-react'
 
@@ -21,6 +22,7 @@ const ICONS: Record<string, React.FC<LucideProps>> = {
   Mail,
   Calendar,
   Mic,
+  Users,
 }
 
 interface IconProps extends LucideProps {

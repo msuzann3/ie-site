@@ -44,7 +44,7 @@ const CONTACT_INFO = [
         <line x1="12" y1="19" x2="12" y2="23" />
       </svg>
     ),
-    label: 'Speaking enquiries',
+    label: 'Speaking inquiries',
     value: 'speaking@innovate-elevate.ai',
     href: 'mailto:speaking@innovate-elevate.ai',
   },

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import PersonPage, { type PersonData } from '@/components/person/PersonPage'
-import { BRANDON_SPEAKING, BRANDON_PUBS } from '@/lib/data'
+import { BRANDON_PUBS } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Brandon Carson — Elevate · Executive coaching & learning strategy',
   description:
-    'Brandon Carson leads the Elevate practice — executive coaching, career coaching, and learning strategy for HR and L&D leaders.',
+    'Brandon Carson leads the Elevate practice — executive coaching, leadership development, and learning strategy for HR and L&D leaders.',
 }
 
 const CONTACT_ICON = (path: React.ReactNode) => (
@@ -33,61 +33,63 @@ const data: PersonData = {
   role: 'Executive coaching and learning strategy lead. I work one-on-one with leaders, and design the systems that develop them at scale.',
   tags: [
     '25+ years in enterprise HR & L&D',
-    'ICF-credentialed coach',
+    'Fortune 1 executive coach',
+    'International keynote speaker',
+    'Skills strategy',
+    'Leadership development',
     'Published author',
-    'Capability strategy',
-    'Career & executive coaching',
   ],
   stats: [
     { num: '25+', label: 'Years leading enterprise\nHR and L&D functions' },
     { num: '200+', label: 'Senior leaders coached\nacross industries' },
-    { num: '3', label: 'Published books on\nworkforce learning' },
-    { num: 'ICF', label: 'Credentialed coach,\nInternational Coaching Federation' },
+    { num: '2', label: 'Published books on\nworkforce learning' },
+    { num: 'F1', label: 'Fortune 1 organizations\nin his coaching practice' },
   ],
   bioTitle: 'A coach with a systems brain.',
   bio: (
     <>
       <p style={{ marginBottom: '22px' }}>
-        I&apos;ve spent most of my career inside the L&D function at large
-        enterprises — designing learning ecosystems, building capability
-        frameworks, and figuring out how the people around me actually grow
-        inside the systems they work in.
+        Brandon Carson is a learning and development executive with more than
+        25 years of experience building learning ecosystems, developing
+        organizational capability, and advising senior leaders at some of the
+        world&apos;s largest organizations.
       </p>
       <p style={{ marginBottom: '22px' }}>
-        Somewhere along the way I noticed that{' '}
+        He is the author of two books published by ATD Press —{' '}
         <strong style={{ fontWeight: 500 }}>
-          the systems work matters most when it lands in a person
-        </strong>
-        . A frame, a question, a conversation that helps someone see their next
-        move clearly. That&apos;s coaching. Eventually I trained for it formally,
-        and now it&apos;s half my practice.
+          L&amp;D&apos;s Playbook for the Digital Age
+        </strong>{' '}
+        and{' '}
+        <strong style={{ fontWeight: 500 }}>
+          Learning in the Age of Immediacy
+        </strong>{' '}
+        — and a contributor to the{' '}
+        <strong style={{ fontWeight: 500 }}>AI-Powered Workforce Series</strong>{' '}
+        alongside Dr. Markus Bernhardt. His work has shaped how enterprises think
+        about learning strategy, capability building, and the evolving role of
+        the L&amp;D function.
       </p>
       <p style={{ marginBottom: '22px' }}>
-        The Elevate side is where that work lives.{' '}
-        <strong style={{ fontWeight: 500 }}>Executive coaching</strong> for
-        senior leaders navigating new scope, new chapters, or the kind of moment
-        that asks for a different version of themselves.{' '}
-        <strong style={{ fontWeight: 500 }}>Career coaching</strong> for
-        individual contributors and emerging leaders making deliberate moves.
-        And{' '}
-        <strong style={{ fontWeight: 500 }}>learning strategy</strong> work for
-        the HR and L&D teams responsible for everyone else.
+        Brandon is also an executive coach, working one-on-one with VPs, CHROs,
+        and CLOs navigating pivotal moments in their careers and organizations.
+        He brings the same systems thinking that drives his strategy work into
+        his coaching practice — helping leaders see the full picture and move
+        with intention.
       </p>
       <p>
-        I keep both hands in the work — coaching individuals and shaping the
-        systems around them — because the two reinforce each other. A coach
-        who&apos;s never run an L&D org will miss things. A capability strategist
-        who&apos;s never coached a real person will miss other things. I try not to
-        miss either.
+        Through the Elevate practice, he works with HR and L&amp;D leaders who
+        are building and rebuilding their functions for what comes next: new
+        expectations, new technology, and a workforce that is asking more of
+        learning than ever before.
       </p>
     </>
   ),
   offeringsEyebrow: 'What I work on',
   offeringsHeadline: (
     <>
-      Three ways I tend
+      Four ways I
       <br />
-      to engage
+      engage
     </>
   ),
   offeringsDesc:
@@ -95,38 +97,31 @@ const data: PersonData = {
   offerings: [
     {
       icon: 'ArrowUp',
-      title: 'Executive coaching',
-      desc: 'One-on-one work with senior leaders — VPs, CHROs, CLOs — navigating a new role, a step up in scope, or a moment that asks them to lead differently. Typically a six-month engagement, twice-monthly sessions.',
+      title: 'Executive & career coaching',
+      desc: 'One-on-one work with senior leaders — VPs, CHROs, CLOs — navigating new roles, expanded scope, or a moment that asks them to lead differently. Also career coaching for emerging managers and mid-career professionals making deliberate moves.',
     },
     {
-      icon: 'Route',
-      title: 'Career coaching',
-      desc: 'For individual contributors, emerging managers, and mid-career professionals making deliberate moves — into management, across functions, into a different industry, or out of a plateau they\'ve been stuck in.',
+      icon: 'Users',
+      title: 'Leadership development design',
+      desc: 'Designing and building leadership development programs — from assessment-based development journeys and emerging leader pipelines to high-potential cohorts and manager effectiveness programs.',
     },
     {
       icon: 'Layers',
-      title: 'Learning strategy & ecosystem design',
-      desc: 'For HR and L&D leaders building or rebuilding their function: capability frameworks, learning architectures, and operating models that turn training spend into actual workforce growth.',
+      title: 'Skills & learning strategy',
+      desc: 'For HR and L&D leaders building or rebuilding their function: skills-based organization design, learning architectures, and operating models that connect skilling investment to measurable workforce capability.',
+    },
+    {
+      icon: 'Compass',
+      title: 'L&D function transformation',
+      desc: 'Strategic advisory for L&D leaders transforming their function — from redefining the team\'s scope and stakeholder relationships to building the capability model and operating cadence that makes the function credible at the executive table.',
     },
   ],
   pubsEyebrow: 'Writing & published work',
   pubsDesc:
-    'Books, articles, and frameworks on learning ecosystems, capability development, and the future of work.',
+    'Two books, an article series, and ongoing writing on learning strategy, leadership development, and the future of workforce capability.',
   pubs: BRANDON_PUBS,
-  speakDesc: (
-    <>
-      A selection of upcoming keynotes, workshops, and conference sessions.
-      Booking enquiries:{' '}
-      <a
-        href="mailto:speaking@innovate-elevate.ai"
-        style={{ color: '#2563EB' }}
-      >
-        speaking@innovate-elevate.ai
-      </a>
-      .
-    </>
-  ),
-  speaking: BRANDON_SPEAKING,
+  speaking: [],
+  speakDesc: <></>,
   contactHeadline: (
     <>
       Let&apos;s talk about{' '}
@@ -168,7 +163,7 @@ const data: PersonData = {
           <line x1="12" y1="19" x2="12" y2="23" />
         </>
       ),
-      label: 'Speaking enquiries',
+      label: 'Speaking inquiries',
       value: 'speaking@innovate-elevate.ai',
       href: 'mailto:speaking@innovate-elevate.ai',
     },

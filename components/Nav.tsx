@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'Philosophy', href: '/#philosophy' },
   { label: 'Michelle', href: '/michelle' },
   { label: 'Brandon', href: '/brandon' },
-  { label: 'Speaking', href: '/#speaking' },
+  { label: 'Speaking', href: '/speaking' },
 ]
 
 export default function Nav() {

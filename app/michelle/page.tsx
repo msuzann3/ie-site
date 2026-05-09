@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import PersonPage, { type PersonData } from '@/components/person/PersonPage'
-import { MICHELLE_SPEAKING, MICHELLE_PUBS } from '@/lib/data'
+import { MICHELLE_PUBS, MICHELLE_PUBS_LIST, MICHELLE_PUBS_CONTRIBUTING } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Michelle Lentz — Innovate · AI strategy & enablement',
@@ -32,17 +32,17 @@ const data: PersonData = {
   side: 'Innovate · the AI side',
   role: 'AI strategy and enablement lead. I help HR and L&D organizations move from AI-curious to AI-capable — without leaving their people behind.',
   tags: [
+    'MS, AI in Business',
     '20+ years in enterprise L&D',
     'Google Cloud Generative AI Leader',
-    'MS, AI in Business · ASU',
     'Published author',
-    'International keynote speaker',
+    'International speaker',
   ],
   stats: [
     { num: '20+', label: 'Years leading enterprise\nL&D and change initiatives' },
     { num: '3+', label: 'Published frameworks and\ngovernance ebooks' },
     { num: '4', label: 'Continents reached through\nkeynotes and workshops' },
-    { num: '1', label: 'MS in AI in Business,\ncurrently underway at ASU' },
+    { num: '1', label: 'MS in AI in Business,\ncurrently underway' },
   ],
   bioTitle: 'A practitioner first.',
   bio: (
@@ -85,7 +85,7 @@ const data: PersonData = {
     <>
       Three places organizations
       <br />
-      tend to bring me in
+      bring me in
     </>
   ),
   offeringsDesc:
@@ -108,22 +108,12 @@ const data: PersonData = {
     },
   ],
   pubsEyebrow: 'Writing & published work',
-  pubsDesc:
-    'A sample of recent work — books, ebooks, and contributions to the field\'s conversation about AI, governance, and the future of L&D.',
+  pubsDesc: 'Books, ebooks, articles, and frameworks on AI strategy, governance, and the future of L&D.',
   pubs: MICHELLE_PUBS,
-  speakDesc: (
-    <>
-      A selection of upcoming keynotes and workshops. Booking enquiries:{' '}
-      <a
-        href="mailto:speaking@innovate-elevate.ai"
-        style={{ color: '#0B8F68' }}
-      >
-        speaking@innovate-elevate.ai
-      </a>
-      .
-    </>
-  ),
-  speaking: MICHELLE_SPEAKING,
+  pubsList: MICHELLE_PUBS_LIST,
+  pubsContributing: MICHELLE_PUBS_CONTRIBUTING,
+  speaking: [],
+  speakDesc: <></>,
   contactHeadline: (
     <>
       Let&apos;s talk about your <em style={{ color: '#0B8F68' }}>AI moment</em>.
@@ -164,7 +154,7 @@ const data: PersonData = {
           <line x1="12" y1="19" x2="12" y2="23" />
         </>
       ),
-      label: 'Speaking enquiries',
+      label: 'Speaking inquiries',
       value: 'speaking@innovate-elevate.ai',
       href: 'mailto:speaking@innovate-elevate.ai',
     },

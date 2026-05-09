@@ -36,6 +36,14 @@ export interface Publication {
   tag: string
   title: string
   meta: string
+  desc?: string
+  href?: string
+}
+
+export interface PubListItem {
+  title: string
+  meta: string
+  href?: string
 }
 
 export const SERVICES: Service[] = [
@@ -101,155 +109,79 @@ export const PILLARS: Pillar[] = [
   },
 ]
 
-export const HOME_SPEAKING: HomeSpeakEvent[] = [
-  {
-    date: 'Mar 4',
-    yr: '2026',
-    event: 'ATD International Conference',
-    topic: 'Partner with AI for Instructional Design',
-    loc: 'Orlando, FL',
-    who: 'michelle',
-    whoLabel: 'Michelle',
-  },
-  {
-    date: 'Mar 18',
-    yr: '2026',
-    event: 'Chief Learning Officer Symposium',
-    topic: 'Coaching the AI-era L&D leader',
-    loc: 'Austin, TX',
-    who: 'brandon',
-    whoLabel: 'Brandon',
-  },
-  {
-    date: 'Apr 9',
-    yr: '2026',
-    event: 'TrainingPros Live',
-    topic: 'AI-ready or AI-hype? Evaluating real workforce skills',
-    loc: 'Virtual',
-    who: 'michelle',
-    whoLabel: 'Michelle',
-  },
-  {
-    date: 'Apr 22',
-    yr: '2026',
-    event: 'HR Tech Asia Pacific',
-    topic: 'Brave new learning: AI change management in a global context',
-    loc: 'Singapore',
-    who: 'michelle',
-    whoLabel: 'Michelle',
-  },
-  {
-    date: 'May 7',
-    yr: '2026',
-    event: 'Learning Leaders Summit',
-    topic: 'From individual contributor to learning architect',
-    loc: 'New York, NY',
-    who: 'brandon',
-    whoLabel: 'Brandon',
-  },
-  {
-    date: 'Jun 11',
-    yr: '2026',
-    event: 'Devlearn Workshop Series',
-    topic: 'Governance frameworks for HR & L&D',
-    loc: 'Las Vegas, NV',
-    who: 'michelle',
-    whoLabel: 'Michelle',
-  },
-]
-
-export const MICHELLE_SPEAKING: PersonSpeakEvent[] = [
-  {
-    date: 'Mar 4',
-    yr: '2026',
-    event: 'ATD International Conference',
-    topic: 'Partner with AI for Instructional Design · Featured session',
-    loc: 'Orlando, FL',
-  },
-  {
-    date: 'Apr 9',
-    yr: '2026',
-    event: 'TrainingPros Live',
-    topic: 'AI-ready or AI-hype? Evaluating real workforce skills · Keynote',
-    loc: 'Virtual',
-  },
-  {
-    date: 'Apr 22',
-    yr: '2026',
-    event: 'HR Tech Asia Pacific',
-    topic: 'Brave new learning: AI change management in a global context · Keynote',
-    loc: 'Singapore',
-  },
-  {
-    date: 'Jun 11',
-    yr: '2026',
-    event: 'Devlearn Workshop Series',
-    topic: 'Governance frameworks for HR & L&D · Half-day workshop',
-    loc: 'Las Vegas, NV',
-  },
-]
-
-export const BRANDON_SPEAKING: PersonSpeakEvent[] = [
-  {
-    date: 'Mar 18',
-    yr: '2026',
-    event: 'Chief Learning Officer Symposium',
-    topic: 'Coaching the AI-era L&D leader · Keynote',
-    loc: 'Austin, TX',
-  },
-  {
-    date: 'May 7',
-    yr: '2026',
-    event: 'Learning Leaders Summit',
-    topic: 'From individual contributor to learning architect · Featured session',
-    loc: 'New York, NY',
-  },
-  {
-    date: 'May 21',
-    yr: '2026',
-    event: 'CHRO Roundtable',
-    topic: 'Capability strategy in the AI era · Closed-door session',
-    loc: 'Boston, MA',
-  },
-  {
-    date: 'Jul 14',
-    yr: '2026',
-    event: 'Talent Connect',
-    topic: 'The Capability Stack: ecosystem design for learning leaders · Workshop',
-    loc: 'San Francisco, CA',
-  },
-]
-
 export const MICHELLE_PUBS: Publication[] = [
   {
     tag: 'Ebook · Clarity Consultants',
-    title: 'From Risk to Responsibility: AI Governance for HR & L&D Organizations',
-    meta: '2025 · Featured by Chief Learning Officer',
+    title: 'From Risk to Responsibility: AI Governance in Your Organization',
+    meta: 'Clarity Consultants',
+    href: 'https://clarityconsultants.com/wp-content/uploads/2025/08/From-Risk-to-Responsibility-AI-Governance-in-Your-Organization__eBook.pdf',
   },
   {
-    tag: 'Article · ATD',
+    tag: 'Guidebook · ATD',
     title: 'Partner with AI for Instructional Design',
-    meta: 'ATD Insights · 2024',
+    meta: 'Featured in ATD Insights · 2025',
+    href: 'https://www.td.org/product/td-at-work-guide--partner-with-ai-for-instructional-design/252502',
   },
   {
-    tag: 'Curriculum · Google & Coursera',
-    title: 'Google Gemini Master Certification: course curriculum and assessments',
-    meta: 'Author · 2024',
+    tag: 'Article · Training Magazine',
+    title: "From Content Creators to Capability Architects: L&D's Identity Shift in the AI Era",
+    meta: 'Training Magazine · June 2025',
   },
+]
+
+export const MICHELLE_PUBS_LIST: PubListItem[] = [
   {
-    tag: 'Framework',
     title: 'The AI Fluency Ladder: Dabbler → Assistant → Collaborator → Innovator',
-    meta: 'Innovate + Elevate · ongoing',
+    meta: 'Framework · Innovate + Elevate',
   },
   {
-    tag: 'Workshop · TrainingPros',
+    title: 'The 6 Levels of L&D Learning Strategy',
+    meta: 'Ebook · ELB Learning · 2024',
+  },
+  {
     title: 'AI-ready or AI-hype? Evaluating real AI skills in the modern workforce',
-    meta: 'Workshop series · 2024–25',
+    meta: 'Workshop · TrainingPros · 2024–25',
   },
   {
-    tag: 'Keynote · Taipei',
     title: 'Brave new learning: AI change management in a global context',
-    meta: 'Asia Pacific L&D Summit · 2024',
+    meta: 'Keynote · ATD Asia-Pacific · 2024',
+  },
+  {
+    title: '6 Lessons Instructional Designers Can Learn from the Muppets',
+    meta: 'Blog · ATD',
+  },
+  {
+    title: 'Two Different Ways to Prompt Your Favorite AI',
+    meta: 'Blog · ELB Learning',
+  },
+  {
+    title: 'The Rise of the AI-Augmented SME',
+    meta: 'Blog · ELB Learning',
+  },
+  {
+    title: 'Resiliency In Transformational Change',
+    meta: 'Blog · ELB Learning',
+  },
+  {
+    title: 'Embracing Agile Methodologies In L&D',
+    meta: 'Blog · ELB Learning',
+  },
+]
+
+export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
+  {
+    title: 'The AI-Powered Workforce Series · Action 2',
+    meta: 'Contributing writer with Brandon Carson & Dr. Markus Bernhardt · ATD',
+    href: 'https://www.td.org/talent-development-leader-ai-resources',
+  },
+  {
+    title: "L&D's Playbook for the Digital Age by Brandon Carson · \"Distributed Work Environments\" (pp. 55–58)",
+    meta: 'Contributing writer · ATD Press · 2021',
+    href: 'https://a.co/d/06Ix3359',
+  },
+  {
+    title: 'Curate · Chapter 7: Curation, Copyright and the Creative Commons',
+    meta: 'Contributing writer · ATD Press · 2015',
   },
 ]
 
@@ -257,31 +189,22 @@ export const BRANDON_PUBS: Publication[] = [
   {
     tag: 'Book · ATD Press',
     title: "L&D's Playbook for the Digital Age",
-    meta: 'Author · ATD Press · 2nd edition',
+    desc: "A comprehensive guide for L&D leaders navigating digital transformation — from rethinking learning architectures to building workforce capability for what's next. Second edition.",
+    meta: 'ATD Press',
+    href: 'https://a.co/d/06Ix3359',
   },
   {
-    tag: 'Book · ASTD',
+    tag: 'Book · ATD Press',
     title: 'Learning in the Age of Immediacy: 5 factors for how we connect, communicate, and get work done',
-    meta: 'Author',
+    desc: 'Five forces are reshaping how people connect, communicate, and get work done — and what it means for how organizations must approach learning in a world that no longer waits.',
+    meta: 'ATD Press',
+    href: 'https://a.co/d/0980GhbF',
   },
   {
-    tag: 'Article · Chief Learning Officer',
-    title: 'From training department to capability function: a transformation playbook',
-    meta: 'CLO Magazine · 2024',
-  },
-  {
-    tag: 'Framework',
-    title: 'The Capability Stack: a model for designing enterprise learning ecosystems',
-    meta: 'Innovate + Elevate · ongoing',
-  },
-  {
-    tag: 'Podcast · L&D Cast',
-    title: "Coaching the AI-era L&D leader: what changes, what doesn't",
-    meta: 'Featured guest · 2025',
-  },
-  {
-    tag: 'Article · ATD',
-    title: 'From individual contributor to learning architect: a career path',
-    meta: 'ATD Insights · 2025',
+    tag: 'Article series · ATD',
+    title: 'The AI-Powered Workforce Series',
+    desc: 'Explore six strategic actions that executive teams should take to prepare their L&D functions for the age of AI. Expert advice from Brandon Carson and Dr. Markus Bernhardt.',
+    meta: 'With Dr. Markus Bernhardt · ATD',
+    href: 'https://www.td.org/talent-development-leader-ai-resources',
   },
 ]

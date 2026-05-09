@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import type { Variant, PersonSpeakEvent, Publication } from '@/lib/data'
+import type { Variant, PersonSpeakEvent, Publication, PubListItem } from '@/lib/data'
 import Icon from '@/components/ui/Icon'
 
 interface StatItem {
@@ -39,6 +39,8 @@ export interface PersonData {
   pubsEyebrow: string
   pubsDesc: string
   pubs: Publication[]
+  pubsList?: PubListItem[]
+  pubsContributing?: PubListItem[]
   speakDesc: React.ReactNode
   speaking: PersonSpeakEvent[]
   contactHeadline: React.ReactNode
@@ -61,6 +63,14 @@ export default function PersonPage({ data }: { data: PersonData }) {
   const contactIconBg = isInnovate ? 'rgba(11,143,104,0.15)' : 'rgba(96,165,250,0.15)'
   const btnStyle = { background: accent }
   const variant = data.variant
+
+  const offeringsGrid =
+    data.offerings.length === 4
+      ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-2'
+      : 'grid-cols-1 md:grid-cols-3'
+
+  const hasPubsList = data.pubsList && data.pubsList.length > 0
+  const hasPubsContributing = data.pubsContributing && data.pubsContributing.length > 0
 
   return (
     <>
@@ -225,7 +235,7 @@ export default function PersonPage({ data }: { data: PersonData }) {
         <p className="section-desc">{data.offeringsDesc}</p>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-3 rounded-[20px] overflow-hidden"
+          className={`grid ${offeringsGrid} rounded-[20px] overflow-hidden`}
           style={{
             gap: '1px',
             background: 'rgba(13,27,53,0.09)',
@@ -260,76 +270,171 @@ export default function PersonPage({ data }: { data: PersonData }) {
         >
           {data.pubsEyebrow}
         </p>
-        <h2 className="section-title">Selected publications</h2>
+        <h2 className="section-title">Publications</h2>
         <p className="section-desc">{data.pubsDesc}</p>
 
+        {/* Featured cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.pubs.map((p) => (
-            <div
-              key={p.title}
-              className={`bg-white rounded-2xl flex flex-col pub-card pub-card-${variant}`}
-              style={{
-                border: '0.5px solid rgba(13,27,53,0.09)',
-                padding: '28px 26px',
-                minHeight: '200px',
-              }}
-            >
-              <span
-                className="inline-block self-start text-[10px] tracking-[0.0625rem] uppercase font-semibold px-2.5 py-1 rounded-[20px] mb-4"
-                style={{ color: accent, background: accentLight }}
+          {data.pubs.map((p) => {
+            const cardContent = (
+              <div
+                key={p.title}
+                className={`bg-white rounded-2xl flex flex-col pub-card pub-card-${variant}`}
+                style={{
+                  border: '0.5px solid rgba(13,27,53,0.09)',
+                  padding: '28px 26px',
+                  minHeight: '200px',
+                }}
               >
-                {p.tag}
-              </span>
-              <h3
-                className="font-display text-[16px] font-normal text-midnight flex-1 mb-4"
-                style={{ letterSpacing: '-0.2px', lineHeight: '1.4' }}
+                <span
+                  className="inline-block self-start text-[10px] tracking-[0.0625rem] uppercase font-semibold px-2.5 py-1 rounded-[20px] mb-4"
+                  style={{ color: accent, background: accentLight }}
+                >
+                  {p.tag}
+                </span>
+                <h3
+                  className="font-display text-[16px] font-normal text-midnight mb-3"
+                  style={{ letterSpacing: '-0.2px', lineHeight: '1.4' }}
+                >
+                  {p.title}
+                </h3>
+                {p.desc && (
+                  <p className="text-[13px] text-text-mid leading-[1.7] font-light mb-3 flex-1">
+                    {p.desc}
+                  </p>
+                )}
+                <p className={`text-[12px] text-text-mid ${p.href ? 'flex items-center gap-1' : ''} mt-auto`}>
+                  {p.meta}
+                  {p.href && (
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: accent, flexShrink: 0 }}>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  )}
+                </p>
+              </div>
+            )
+
+            return p.href ? (
+              <a
+                key={p.title}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block no-underline hover:opacity-90 transition-opacity"
               >
-                {p.title}
-              </h3>
-              <p className="text-[12px] text-text-mid">{p.meta}</p>
-            </div>
-          ))}
+                {cardContent}
+              </a>
+            ) : (
+              <div key={p.title}>{cardContent}</div>
+            )
+          })}
         </div>
+
+        {/* List items */}
+        {hasPubsList && (
+          <div className="mt-10 max-w-[760px]">
+            <ul className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)]">
+              {data.pubsList!.map((item) => (
+                <li key={item.title} className="py-3.5 flex items-baseline justify-between gap-6">
+                  <div>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[14px] text-midnight font-light hover:underline"
+                        style={{ textDecorationColor: accent }}
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span className="text-[14px] text-midnight font-light">{item.title}</span>
+                    )}
+                  </div>
+                  <span className="text-[12px] text-text-mid whitespace-nowrap flex-shrink-0">{item.meta}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Contributing writer */}
+        {hasPubsContributing && (
+          <div className="mt-10 max-w-[760px]">
+            <p
+              className="text-[11px] font-semibold uppercase tracking-[0.125rem] mb-4"
+              style={{ color: accent }}
+            >
+              Contributing writer
+            </p>
+            <ul className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)]">
+              {data.pubsContributing!.map((item) => (
+                <li key={item.title} className="py-3.5 flex items-baseline justify-between gap-6">
+                  <div>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[14px] text-midnight font-light hover:underline"
+                        style={{ textDecorationColor: accent }}
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span className="text-[14px] text-midnight font-light">{item.title}</span>
+                    )}
+                  </div>
+                  <span className="text-[12px] text-text-mid whitespace-nowrap flex-shrink-0">{item.meta}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
-      {/* ── SPEAKING ── */}
-      <section className="bg-silver px-5 py-16 md:px-20 md:py-24">
-        <p
-          className="text-[11px] font-semibold uppercase tracking-[0.125rem] mb-3"
-          style={{ color: accent }}
-        >
-          Speaking
-        </p>
-        <h2 className="section-title">Where I&apos;ll be next</h2>
-        <p className="section-desc">{data.speakDesc}</p>
+      {/* ── SPEAKING (hidden when empty) ── */}
+      {data.speaking.length > 0 && (
+        <section className="bg-silver px-5 py-16 md:px-20 md:py-24">
+          <p
+            className="text-[11px] font-semibold uppercase tracking-[0.125rem] mb-3"
+            style={{ color: accent }}
+          >
+            Speaking
+          </p>
+          <h2 className="section-title">Speaking engagements</h2>
+          <p className="section-desc">{data.speakDesc}</p>
 
-        <div className="speak-list">
-          {data.speaking.map((s) => (
-            <div
-              key={`${s.date}-${s.event}`}
-              className="speak-row-person bg-white hover:bg-silver transition-colors duration-150 px-4 py-4 md:px-7"
-            >
+          <div className="speak-list">
+            {data.speaking.map((s) => (
               <div
-                className="font-display text-[13px] md:text-[14px] font-medium text-midnight"
-                style={{ letterSpacing: '-0.2px' }}
+                key={`${s.date}-${s.event}`}
+                className="speak-row-person bg-white hover:bg-silver transition-colors duration-150 px-4 py-4 md:px-7"
               >
-                {s.date}
-                <span className="text-text-mid font-normal ml-1">{s.yr}</span>
-              </div>
-              <div>
                 <div
-                  className="font-display text-[15px] md:text-[16px] font-medium text-midnight mb-0.5 md:mb-1"
+                  className="font-display text-[13px] md:text-[14px] font-medium text-midnight"
                   style={{ letterSpacing: '-0.2px' }}
                 >
-                  {s.event}
+                  {s.date}
+                  <span className="text-text-mid font-normal ml-1">{s.yr}</span>
                 </div>
-                <div className="text-[12px] md:text-[13px] text-text-mid font-light">{s.topic}</div>
+                <div>
+                  <div
+                    className="font-display text-[15px] md:text-[16px] font-medium text-midnight mb-0.5 md:mb-1"
+                    style={{ letterSpacing: '-0.2px' }}
+                  >
+                    {s.event}
+                  </div>
+                  <div className="text-[12px] md:text-[13px] text-text-mid font-light">{s.topic}</div>
+                </div>
+                <div className="speak-loc text-[13px] text-text-mid hidden md:block">{s.loc}</div>
               </div>
-              <div className="speak-loc text-[13px] text-text-mid hidden md:block">{s.loc}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── CONTACT ── */}
       <section
