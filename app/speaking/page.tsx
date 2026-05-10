@@ -46,6 +46,7 @@ const BRANDON_TOPICS = [
 ]
 
 const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string }[] = [
+  { event: 'Training Magazine TechLearn Conference', topic: 'Stop Agreeing with Me: Escaping the AI Agreement Machine', yr: '2026', href: 'https://www.techlearnconference.com/' },
   { event: 'ATD International Conference and Exposition', topic: 'Brain, Heart, and Courage: Strengthening Critical Thinking with AI', yr: '2026', href: 'https://atdconference.td.org/' },
   { event: 'ASU-GSV Summit', topic: 'ROI in the Age of AI: Lessons from the Field', yr: '2026' },
   { event: 'Learning Guild L&D Trends Online Conference', topic: 'Learning Leaders as AI Change Agents: Leading Transformation', yr: '2025', href: 'https://www.learningguild.com/online-events-archive/learning-leaders-as-ai-change-agents-leading-transformation' },
