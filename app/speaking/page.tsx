@@ -45,18 +45,38 @@ const BRANDON_TOPICS = [
   },
 ]
 
-const MICHELLE_RECENT = [
-  { event: 'ATD International Conference and Exposition', topic: 'Brain, Heart, and Courage: Strengthening Critical Thinking with AI', yr: '2026' },
+const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string }[] = [
+  { event: 'ATD International Conference and Exposition', topic: 'Brain, Heart, and Courage: Strengthening Critical Thinking with AI', yr: '2026', href: 'https://atdconference.td.org/' },
   { event: 'ASU-GSV Summit', topic: 'ROI in the Age of AI: Lessons from the Field', yr: '2026' },
-  { event: 'Learning Guild L&D Trends Online Conference', topic: 'Learning Leaders as AI Change Agents: Leading Transformation', yr: '2025' },
-  { event: 'ATD Asia-Pacific Conference, Taiwan', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework', yr: '2025' },
-  { event: 'ATD OrgDev', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework', yr: '2025' },
-  { event: 'Training Magazine TechLearn', topic: 'Moving Right Along: Muppet Wisdom for Tech-Enhanced Learning', yr: '2025' },
-  { event: 'ATD Core4', topic: 'Inspired Instructional Design: Muppet Magic for Next-Gen Learning', yr: '2025' },
-  { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce', yr: '2025' },
-  { event: 'SHRM Talent', topic: 'Bridging AI & Human Potential: Positive Change Management for HR', yr: '2025' },
+  { event: 'Learning Guild L&D Trends Online Conference', topic: 'Learning Leaders as AI Change Agents: Leading Transformation', yr: '2025', href: 'https://www.learningguild.com/online-events-archive/learning-leaders-as-ai-change-agents-leading-transformation' },
+  { event: 'ATD Asia-Pacific Conference, Taiwan', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework', yr: '2025', href: 'https://www.atdapc.org.tw/en' },
+  { event: 'ATD OrgDev', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework for OD Leaders', yr: '2025', href: 'https://orgdev.td.org/' },
+  { event: 'Training Magazine TechLearn', topic: 'Moving Right Along: Muppet Wisdom for Tech-Enhanced Learning', yr: '2025', href: 'https://www.techlearnconference.com/' },
+  { event: 'ATD Core4', topic: 'Inspired Instructional Design: Muppet Magic for Next-Gen Learning', yr: '2025', href: 'https://core4.td.org/' },
+  { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce', yr: '2025', href: 'https://www.atdpugetsound.org/event-6272616' },
+  { event: 'SHRM Talent 2025', topic: 'Bridging AI & Human Potential: Positive Change Management for HR', yr: '2025', href: 'https://conferences.shrm.org/conference/2025-talent-conference-expo/' },
   { event: 'Clarity Consultants Webinar', topic: 'Critical Thinking & AI: Skills that Make AI Useful', yr: '2025', href: 'https://youtu.be/bMhSzhuDAiE?si=RzfQ1BFv8xbIfVKV' },
-  { event: 'L&D Cares', topic: 'D for Doubt (Part 1 of the DUAL series)', yr: '2025', href: 'https://youtu.be/1IvevlJrGco?si=TCV2Kzjv4w_ffUvh' },
+  { event: 'L&D Cares Webinar', topic: 'D for Doubt (Part 1 of the DUAL series, with Ben Eden)', yr: '2025', href: 'https://youtu.be/1IvevlJrGco?si=TCV2Kzjv4w_ffUvh' },
+  { event: 'Training Magazine Conference', topic: 'The Future-Ready Instructional Designer: Thriving in an AI-Powered World', yr: '2025', href: 'https://www.trainingconference.com/2025/index.cfm' },
+  { event: 'ATD TechKnowledge 2025', topic: 'TK Solve: AI (with Josh Cavalier and Joe Leslie)', yr: '2025', href: 'https://techknowledge.td.org/' },
+]
+
+const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: string; href?: string }[] = [
+  { event: 'ATD International Conference & Exposition', loc: 'Los Angeles', yr: '2025', href: 'https://atdconference.td.org/' },
+  { event: 'DevLearn', yr: '2025', href: 'https://devlearn.com/' },
+  { event: 'ATD Asia-Pacific Conference', topic: 'Keynote', loc: 'Taiwan', yr: '2025', href: 'https://www.atdapc.org.tw/en' },
+  { event: 'Stockholm Learning Conference', topic: 'Keynote', yr: '2025', href: 'https://learningconference.se/' },
+  { event: 'London iVentive', yr: '2025', href: 'https://iventiv.com/events/talent-management/talent-management-london-executive-knowledge-exchange-0' },
+  { event: 'Paris iVentive', yr: '2025', href: 'https://iventiv.com/events/learning-futures/learning-futures-paris-executive-knowledge-exchange-5' },
+  { event: 'ATD Southwest Learning Summit', topic: 'Keynote', loc: 'Dallas', yr: '2025', href: 'https://www.tddallas.org/event-5876369' },
+  { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce (with Michelle Lentz)', yr: '2025', href: 'https://www.atdpugetsound.org/event-6272616' },
+  { event: 'Albany ATD', yr: '2025' },
+  { event: 'Learning Technologies', loc: 'London', yr: '2025', href: 'https://www.learningtechnologies.co.uk/' },
+  { event: 'Docebo Inspire', yr: '2025', href: 'https://inspire.docebo.com/' },
+  { event: 'ATD TechKnowledge', topic: 'Rock Stars L&D Panel', yr: '2025', href: 'https://techknowledge.td.org/' },
+  { event: 'TrainingPros Roundtable: Talent Sustainability', loc: 'Dallas', yr: '2024' },
+  { event: 'Houston ATD', topic: 'Closing Keynote', yr: '2024', href: 'https://tdhouston.org/' },
+  { event: 'Cognota LearnOps Virtual Summit', topic: 'Leveraging an L&D Playbook to Improve Performance', yr: '2024', href: 'https://cognota.com/virtual-learnops-summit-2024/' },
 ]
 
 const MICHELLE_ARCHIVE = [
@@ -67,15 +87,27 @@ const MICHELLE_ARCHIVE = [
   { event: 'ATD International Conference & Exposition', topic: 'Down the Rabbit Hole: Design Thinking for AI', yr: '2024' },
   { event: 'Learning Technologies London', topic: 'Down the Rabbit Hole: Design Thinking for AI', yr: '2024' },
   { event: 'Learning Guild', topic: 'Bridging AI & Human Potential Through Change Management for L&D', yr: '2024' },
+  { event: 'Learning Guild', topic: 'Down the Rabbit Hole: Design Thinking for AI', yr: '2024' },
   { event: 'Learning Guild Learning Solutions', topic: "Keepin' It Legal: Creative Commons, Copyright, and Free Stuff", yr: '2022' },
   { event: 'ATD TechKnowledge', topic: 'Fearless Instructional Design: Learning from the Imagination of Jim Henson', yr: '2020' },
   { event: 'ATD TechKnowledge', topic: 'Putting the Human Back in HR', yr: '2018' },
   { event: 'ATD Atlanta ACE', topic: "Keynote — Keepin' It Legal: Creative Commons, Copyright, and Free Stuff", yr: '2014' },
+  { event: 'ATD TechKnowledge', topic: "Keepin' It Legal; Pragmatic Principles of Mobile Design", yr: '2014' },
   { event: 'DevLearn', topic: 'Fearless Instructional Design; Creative Commons and Open Source', yr: '2013' },
   { event: 'mLearnCon', topic: "Keepin' It Legal: Copyright and Creative Commons for Mobile", yr: '2013' },
+  { event: 'Training Conference', topic: "Keepin' It Legal; Instructional Design for Mobile Devices", yr: '2013' },
   { event: 'DevLearn', topic: 'Social Media Policy and Training', yr: '2012' },
   { event: 'mLearnCon', topic: 'Designing for Multiple Devices', yr: '2012' },
+  { event: 'ATD TechKnowledge', topic: "Yours, Mine, & Ours: Copyright & Creative Commons", yr: '2012' },
   { event: 'DevLearn', topic: 'Engaging with Enterprise Social Media; Yours, Mine, & Ours', yr: '2011' },
+  { event: 'Learning Guild Learning Solutions', topic: "Advanced Twitter; Keepin' It Legal", yr: '2011' },
+  { event: 'ATD TechKnowledge', topic: 'Social Media 101; Beyond Search; TK Talks', yr: '2011' },
+]
+
+const TESTIMONIALS = [
+  '"Michelle Lentz should speak on AI at all ATD conferences."',
+  '"LOVED THIS SESSION! Michelle had such great ideas behind the use of AI ethically in L&D spaces."',
+  '"Amazing. Practical and insightful and informative and engaging."',
 ]
 
 export default function SpeakingPage() {
@@ -104,7 +136,7 @@ export default function SpeakingPage() {
             <br className="hidden md:block" /> learning, and the future of work.
           </h1>
           <p className="text-[16px] md:text-[18px] text-white/60 font-light leading-relaxed max-w-[600px] mb-8">
-            Michelle and Brandon speak to HR and L&D audiences at conferences, corporate events, and leadership gatherings worldwide. Sessions blend strategy, plain language, and practical examples.
+            Michelle and Brandon speak to HR and L&D audiences at conferences, corporate events, and leadership gatherings worldwide. Sessions range from keynotes to half-day workshops and can be tailored to your audience.
           </p>
           <a
             href="mailto:speaking@innovate-elevate.ai"
@@ -131,10 +163,27 @@ export default function SpeakingPage() {
             Speaker, facilitator, and explainer of complicated things.
           </h2>
           <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-10">
-            Michelle helps audiences make sense of emerging technology without losing the human thread. Her sessions blend AI strategy, change management, and enough creative energy to keep the room engaged.
+            Michelle helps audiences make sense of emerging technology without losing the human thread. Her sessions blend AI strategy, change management, and enough creative energy to keep the room engaged. Open to alternative time zones, travel, and international engagements.
           </p>
 
+          {/* Testimonials */}
+          <div className="flex flex-col md:flex-row gap-3 mb-10">
+            {TESTIMONIALS.map((t) => (
+              <div
+                key={t}
+                className="flex-1 bg-[#F5F7FA] rounded-2xl px-5 py-4"
+                style={{ border: '0.5px solid rgba(13,27,53,0.07)' }}
+              >
+                <p className="text-[13px] text-text-mid font-light leading-[1.7] italic">{t}</p>
+                <p className="text-[11px] text-text-mid/60 mt-2">— ATD Core4 session evaluation</p>
+              </div>
+            ))}
+          </div>
+
           {/* Topics */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4">
+            Signature topics
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
             {MICHELLE_TOPICS.map((t) => (
               <div
@@ -158,15 +207,13 @@ export default function SpeakingPage() {
             {MICHELLE_RECENT.map((e) => (
               <div key={`${e.event}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
                 <div className="flex-1 min-w-0">
-                  <span className="text-[14px] text-midnight font-light">
-                    {e.href ? (
-                      <a href={e.href} target="_blank" rel="noopener noreferrer" className="hover:text-emerald transition-colors">
-                        {e.event}
-                      </a>
-                    ) : (
-                      e.event
-                    )}
-                  </span>
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
+                      {e.event}
+                    </a>
+                  ) : (
+                    <span className="text-[14px] text-midnight font-light">{e.event}</span>
+                  )}
                   <span className="text-[13px] text-text-mid font-light"> · {e.topic}</span>
                 </div>
                 <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
@@ -195,7 +242,11 @@ export default function SpeakingPage() {
             Brandon brings 25+ years of enterprise L&D leadership to the stage — with a coaching sensibility and a systems perspective that resonates with executive and practitioner audiences alike.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {/* Topics */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-blue-600 mb-4">
+            Signature topics
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
             {BRANDON_TOPICS.map((t) => (
               <div
                 key={t.title}
@@ -209,6 +260,29 @@ export default function SpeakingPage() {
               </div>
             ))}
           </div>
+
+          {/* Engagements */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-blue-600 mb-4">
+            Recent engagements
+          </p>
+          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.10)] max-w-[820px]">
+            {BRANDON_ENGAGEMENTS.map((e) => (
+              <div key={`${e.event}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
+                <div className="flex-1 min-w-0">
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-blue-600 transition-colors">
+                      {e.event}
+                    </a>
+                  ) : (
+                    <span className="text-[14px] text-midnight font-light">{e.event}</span>
+                  )}
+                  {e.topic && <span className="text-[13px] text-text-mid font-light"> · {e.topic}</span>}
+                  {e.loc && <span className="text-[13px] text-text-mid font-light"> · {e.loc}</span>}
+                </div>
+                <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -216,13 +290,13 @@ export default function SpeakingPage() {
       <section className="px-5 py-16 md:px-20 md:py-24 border-b border-[rgba(13,27,53,0.08)]">
         <div className="max-w-[1180px]">
           <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-2">
-            Archive
+            Archive · Michelle Lentz
           </p>
           <h2
             className="font-display font-normal text-midnight mb-8 leading-snug"
             style={{ fontSize: 'clamp(22px, 3vw, 32px)', letterSpacing: '-0.05rem' }}
           >
-            Earlier presentations — Michelle Lentz
+            Earlier presentations
           </h2>
           <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
             {MICHELLE_ARCHIVE.map((e) => (
@@ -251,7 +325,7 @@ export default function SpeakingPage() {
             Bring Michelle or Brandon to your event.
           </h2>
           <p className="text-[15px] text-white/60 font-light leading-relaxed mb-8">
-            We speak at conferences, corporate offsites, leadership summits, and virtual events. Open to alternative time zones, travel, and international engagements. Reach out with your event details and we&apos;ll respond within two business days.
+            We speak at conferences, corporate offsites, leadership summits, and virtual events. Sessions can be tailored as workshops ranging from 1–4 hours. Reach out with your event details and we&apos;ll respond within two business days.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
