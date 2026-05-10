@@ -148,7 +148,7 @@ export const MICHELLE_PUBS_LIST: PubListItem[] = [
     meta: 'Keynote · ATD Asia-Pacific · 2024',
   },
   {
-    title: '6 Lessons Instructional Designers Can Learn from the Muppets',
+    title: 'Inspired Instructional Design: Lessons from the Muppets',
     meta: 'Blog · ATD',
     href: 'https://www.td.org/atd-blog/6-lessons-instructional-designers-can-learn-from-the-muppets',
   },
@@ -177,7 +177,7 @@ export const MICHELLE_PUBS_LIST: PubListItem[] = [
 export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
   {
     title: 'Action 2: Learning at Scale — The AI-Powered Workforce Series',
-    meta: 'Co-authored with Brandon Carson & Dr. Markus Bernhardt · ATD',
+    meta: 'Co-authored by Michelle Lentz, Brandon Carson & Dr. Markus Bernhardt · ATD',
     href: 'https://www.td.org/content/talent-development-leader/action-2-learning-at-scale',
   },
   {
