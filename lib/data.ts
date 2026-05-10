@@ -126,6 +126,7 @@ export const MICHELLE_PUBS: Publication[] = [
     tag: 'Article · Training Magazine',
     title: "From Content Creators to Capability Architects: L&D's Identity Shift in the AI Era",
     meta: 'Training Magazine · June 2025',
+    href: 'https://trainingmag.com/from-content-creators-to-capability-architects-lds-identity-shift-in-the-ai-era/',
   },
 ]
 
@@ -149,30 +150,35 @@ export const MICHELLE_PUBS_LIST: PubListItem[] = [
   {
     title: '6 Lessons Instructional Designers Can Learn from the Muppets',
     meta: 'Blog · ATD',
+    href: 'https://www.td.org/atd-blog/6-lessons-instructional-designers-can-learn-from-the-muppets',
   },
   {
     title: 'Two Different Ways to Prompt Your Favorite AI',
     meta: 'Blog · ELB Learning',
+    href: 'https://blog.elblearning.com/two-different-ways-to-prompt-your-favorite-ai',
   },
   {
     title: 'The Rise of the AI-Augmented SME',
     meta: 'Blog · ELB Learning',
+    href: 'https://blog.elblearning.com/the-rise-of-the-ai-augmented-sme',
   },
   {
     title: 'Resiliency In Transformational Change',
     meta: 'Blog · ELB Learning',
+    href: 'https://blog.elblearning.com/resiliency-in-transformational-change',
   },
   {
     title: 'Embracing Agile Methodologies In L&D',
     meta: 'Blog · ELB Learning',
+    href: 'https://blog.elblearning.com/embracing-agile-methodologies-in-ld',
   },
 ]
 
 export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
   {
-    title: 'The AI-Powered Workforce Series · Action 2',
-    meta: 'Contributing writer with Brandon Carson & Dr. Markus Bernhardt · ATD',
-    href: 'https://www.td.org/talent-development-leader-ai-resources',
+    title: 'Action 2: Learning at Scale — The AI-Powered Workforce Series',
+    meta: 'Co-authored with Brandon Carson & Dr. Markus Bernhardt · ATD',
+    href: 'https://www.td.org/content/talent-development-leader/action-2-learning-at-scale',
   },
   {
     title: "L&D's Playbook for the Digital Age by Brandon Carson · \"Distributed Work Environments\" (pp. 55–58)",
