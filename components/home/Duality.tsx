@@ -14,7 +14,7 @@ export default function Duality() {
           style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
         >
           The strategy, governance, and workforce readiness to{' '}
-          <em className="text-emerald">actually</em> adopt AI.
+          <em className="text-emerald">confidently</em> adopt AI.
         </h3>
         <p className="text-[15px] text-text-mid leading-[1.75] font-light max-w-[440px] mb-7">
           Michelle leads our AI practice — helping HR and L&D organizations move

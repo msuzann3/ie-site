@@ -119,6 +119,7 @@ const data: PersonData = {
   pubsContributing: MICHELLE_PUBS_CONTRIBUTING,
   speaking: [],
   speakDesc: <></>,
+  linkedin: 'https://www.linkedin.com/in/michelleslentz/',
   contactHeadline: (
     <>
       Let&apos;s talk about your <em style={{ color: '#0B8F68' }}>AI moment</em>.

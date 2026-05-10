@@ -123,6 +123,7 @@ const data: PersonData = {
   pubs: BRANDON_PUBS,
   speaking: [],
   speakDesc: <></>,
+  linkedin: 'https://www.linkedin.com/in/brandoncarson/',
   contactHeadline: (
     <>
       Let&apos;s talk about{' '}

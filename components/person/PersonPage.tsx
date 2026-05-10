@@ -43,6 +43,7 @@ export interface PersonData {
   pubsContributing?: PubListItem[]
   speakDesc: React.ReactNode
   speaking: PersonSpeakEvent[]
+  linkedin?: string
   contactHeadline: React.ReactNode
   contactDesc: string
   contactRows: ContactRowData[]
@@ -124,6 +125,21 @@ export default function PersonPage({ data }: { data: PersonData }) {
               <a href="#contact" className="btn-primary" style={btnStyle}>
                 Schedule a call
               </a>
+              {data.linkedin && (
+                <a
+                  href={data.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost-dark inline-flex items-center gap-2"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  LinkedIn
+                </a>
+              )}
               <a href="#offerings" className="btn-ghost-dark">
                 {isInnovate ? 'See what I do' : 'See how I work'}
               </a>
