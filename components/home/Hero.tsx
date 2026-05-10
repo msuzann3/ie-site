@@ -27,10 +27,10 @@ export default function Hero() {
         style={{
           fontSize: '360px',
           letterSpacing: '-8px',
-          color: 'rgba(255,255,255,0.03)',
+          color: 'rgba(255,255,255,0.06)',
         }}
       >
-        I<span style={{ color: 'rgba(11,143,104,0.07)' }}>+</span>E
+        I<span style={{ color: 'rgba(11,143,104,0.14)' }}>+</span>E
       </div>
 
       {/* Content — staggered fade-up */}

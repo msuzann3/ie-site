@@ -78,8 +78,9 @@ export default function Footer() {
           <ul className="space-y-2.5 list-none">
             {[
               { label: 'info@innovate-elevate.ai', href: 'mailto:info@innovate-elevate.ai' },
-              { label: 'Schedule a 30-min call', href: '#' },
-              { label: 'Inquire about speaking', href: 'mailto:speaking@innovate-elevate.ai' },
+              { label: 'Schedule with Michelle', href: 'https://go.innovate-elevate.ai/meetwithmichelle' },
+              { label: 'Schedule with Brandon', href: 'https://go.innovate-elevate.ai/meetwithbrandon' },
+              { label: 'Speaking inquiries', href: 'mailto:speaking@innovate-elevate.ai' },
             ].map(({ label, href }) => (
               <li key={label}>
                 <a

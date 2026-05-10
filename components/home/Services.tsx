@@ -18,7 +18,7 @@ export default function Services() {
 
       {/* 3×2 grid with hairline dividers via gap + bg trick */}
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[20px] overflow-hidden border border-midnight/[0.09]"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-[20px] overflow-hidden border border-midnight/[0.09]"
         style={{ gap: '1px', background: 'rgba(13,27,53,0.09)' }}
       >
         {SERVICES.map((s) => (
