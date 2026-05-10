@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, Outfit } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -32,6 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        {/* Plausible analytics */}
+        <Script async src="https://plausible.io/js/pa-sBqv-z1FC4Njri1WQyvHb.js" strategy="afterInteractive" />
+        <Script id="plausible-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()` }} />
       </body>
     </html>
   )
