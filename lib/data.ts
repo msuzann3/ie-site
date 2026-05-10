@@ -150,8 +150,9 @@ export const MICHELLE_PUBS_LIST: PubListItem[] = [
     meta: 'Framework · Innovate + Elevate',
   },
   {
-    title: 'The 6 Levels of L&D Learning Strategy',
+    title: 'The 6 Pillars of L&D Learning Strategy',
     meta: 'Ebook · ELB Learning · 2024',
+    href: 'https://drive.google.com/file/d/138splFbP6ACuWioO801hx1VGiAdRmg25/view',
   },
   {
     title: 'AI-ready or AI-hype? Evaluating real AI skills in the modern workforce',
@@ -159,7 +160,7 @@ export const MICHELLE_PUBS_LIST: PubListItem[] = [
   },
   {
     title: 'Brave new learning: AI change management in a global context',
-    meta: 'Keynote · ATD Asia-Pacific · 2024',
+    meta: 'International conference session · ATD Asia-Pacific · 2025',
   },
   {
     title: 'Inspired Instructional Design: Lessons from the Muppets',
@@ -200,8 +201,9 @@ export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
     href: 'https://a.co/d/06Ix3359',
   },
   {
-    title: 'Curate · Chapter 7: Curation, Copyright and the Creative Commons',
+    title: 'Ready, Set, Curate: 8 Learning Experts Tell You How · Chapter 7: Curation, Copyright and the Creative Commons',
     meta: 'Contributing writer · ATD Press · 2015',
+    href: 'https://a.co/d/04r5QGDm',
   },
 ]
 

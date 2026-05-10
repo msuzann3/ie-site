@@ -33,17 +33,17 @@ const data: PersonData = {
   role: 'Executive coaching and learning strategy lead. I work one-on-one with leaders, and design the systems that develop them at scale.',
   tags: [
     '25+ years in enterprise HR & L&D',
-    'Fortune 1 executive coach',
+    'Executive & career coach',
+    'Coached at Fortune 1',
     'International keynote speaker',
-    'Skills strategy',
     'Leadership development',
     'Published author',
   ],
   stats: [
     { num: '25+', label: 'Years leading enterprise\nHR and L&D functions' },
-    { num: '200+', label: 'Senior leaders coached\nacross industries' },
+    { num: '1,000+', label: 'Learners reached across\ncareers, cohorts, and coaching' },
     { num: '2', label: 'Published books on\nworkforce learning' },
-    { num: 'F1', label: 'Fortune 1 organizations\nin his coaching practice' },
+    { num: 'No. 1', label: 'Fortune-ranked company where\nhe coached new executives' },
   ],
   bioTitle: 'A coach with a systems brain.',
   bio: (
@@ -70,11 +70,12 @@ const data: PersonData = {
         the L&amp;D function.
       </p>
       <p style={{ marginBottom: '22px' }}>
-        Brandon is also an executive coach, working one-on-one with VPs, CHROs,
-        and CLOs navigating pivotal moments in their careers and organizations.
-        He brings the same systems thinking that drives his strategy work into
-        his coaching practice — helping leaders see the full picture and move
-        with intention.
+        Brandon is also an executive and career coach. At the senior end, he
+        works one-on-one with VPs, CHROs, and CLOs navigating pivotal moments
+        in their careers — including coaching newly placed executives at a
+        Fortune 1 company. And for anyone wanting to grow more deliberately in
+        their work, he brings that same practice to career coaching at any
+        level: helping people see the full picture and move with intention.
       </p>
       <p>
         Through the Elevate practice, he works with HR and L&amp;D leaders who
@@ -98,7 +99,7 @@ const data: PersonData = {
     {
       icon: 'ArrowUp',
       title: 'Executive & career coaching',
-      desc: 'One-on-one work with senior leaders — VPs, CHROs, CLOs — navigating new roles, expanded scope, or a moment that asks them to lead differently. Also career coaching for emerging managers and mid-career professionals making deliberate moves.',
+      desc: 'One-on-one coaching for senior leaders navigating new roles, expanded scope, or moments that ask them to lead differently — and for anyone at any level who wants to grow more deliberately in their work. Coaching meets you where you are.',
     },
     {
       icon: 'Users',
@@ -166,6 +167,18 @@ const data: PersonData = {
       label: 'Speaking inquiries',
       value: 'speaking@innovate-elevate.ai',
       href: 'mailto:speaking@innovate-elevate.ai',
+    },
+    {
+      icon: CONTACT_ICON(
+        <>
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </>
+      ),
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/brandoncarson',
+      href: 'https://www.linkedin.com/in/brandoncarson/',
     },
   ],
 }

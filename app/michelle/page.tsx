@@ -41,8 +41,8 @@ const data: PersonData = {
   stats: [
     { num: '20+', label: 'Years leading enterprise\nL&D and change initiatives' },
     { num: '3+', label: 'Published frameworks and\ngovernance ebooks' },
-    { num: '4', label: 'Continents reached through\nkeynotes and workshops' },
-    { num: '1', label: 'MS in AI in Business,\ncurrently underway' },
+    { num: '3', label: 'Continents reached through\nconference sessions and workshops' },
+    { num: 'MS', label: 'AI in Business\nArizona State University' },
   ],
   bioTitle: 'A practitioner first.',
   bio: (
@@ -66,26 +66,26 @@ const data: PersonData = {
         that turns AI from a buzzword into a workforce capability.
       </p>
       <p>
-        I&apos;m also currently completing an{' '}
+        I hold an{' '}
         <strong style={{ fontWeight: 500 }}>
-          MS in AI in Business at Arizona State
-        </strong>
-        , hold the{' '}
+          MS in AI in Business from Arizona State University
+        </strong>{' '}
+        and the{' '}
         <strong style={{ fontWeight: 500 }}>
           Google Cloud Generative AI Leader
         </strong>{' '}
-        certification, and authored the curriculum for the Google Gemini Master
-        certification on Coursera. The credentials matter less than what
-        they&apos;re for: bringing rigor to a space full of vibes.
+        certification. I have worked with AI strategy at large financial and
+        credit institutions. The credentials matter less than what they&apos;re
+        for: bringing rigor to a space full of vibes.
       </p>
     </>
   ),
   offeringsEyebrow: 'What I work on',
   offeringsHeadline: (
     <>
-      Three places organizations
+      Four ways I
       <br />
-      bring me in
+      engage
     </>
   ),
   offeringsDesc:
@@ -103,8 +103,13 @@ const data: PersonData = {
     },
     {
       icon: 'GraduationCap',
-      title: 'Workforce AI enablement',
-      desc: 'Custom learning programs, the AI Fluency Ladder framework (Dabbler → Innovator), and curricula that move your people from AI-curious to AI-capable in measurable ways.',
+      title: 'AI change management & enablement',
+      desc: 'Custom learning programs, automation through AI agents, and the AI Fluency Ladder framework (Dabbler → Innovator) — moving your people from AI-curious to AI-capable while managing the human side of transformation.',
+    },
+    {
+      icon: 'BarChart2',
+      title: 'Learning auditing',
+      desc: 'A structured assessment of your L&D function — evaluating programs, technology, talent, and alignment with business strategy to identify gaps and prioritize the highest-leverage investments.',
     },
   ],
   pubsEyebrow: 'Writing & published work',
@@ -157,6 +162,18 @@ const data: PersonData = {
       label: 'Speaking inquiries',
       value: 'speaking@innovate-elevate.ai',
       href: 'mailto:speaking@innovate-elevate.ai',
+    },
+    {
+      icon: CONTACT_ICON(
+        <>
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </>
+      ),
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/michelleslentz',
+      href: 'https://www.linkedin.com/in/michelleslentz/',
     },
   ],
 }

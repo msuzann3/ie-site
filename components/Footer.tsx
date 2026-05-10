@@ -28,21 +28,21 @@ export default function Footer() {
             Innovate · AI
           </div>
           <ul className="space-y-2.5 list-none">
-            {[
-              { label: 'AI strategy', href: '/#what-we-do' },
-              { label: 'Governance & ethics', href: '/#what-we-do' },
-              { label: 'Workforce enablement', href: '/#what-we-do' },
-              { label: "Michelle's page", href: '/michelle' },
-            ].map(({ label, href }) => (
+            <li>
+              <Link href="/michelle" className="text-[13px] text-white/65 hover:text-white/90 transition-colors duration-150">
+                About Michelle
+              </Link>
+            </li>
+            {['AI strategy', 'Governance & ethics', 'Workforce enablement'].map((label) => (
               <li key={label}>
-                <Link
-                  href={href}
-                  className="text-[13px] text-white/45 hover:text-white/85 transition-colors duration-150"
-                >
-                  {label}
-                </Link>
+                <span className="text-[13px] text-white/35">{label}</span>
               </li>
             ))}
+            <li>
+              <a href="https://www.linkedin.com/in/michelleslentz/" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/45 hover:text-white/85 transition-colors duration-150">
+                Michelle on LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -52,21 +52,21 @@ export default function Footer() {
             Elevate · Coaching
           </div>
           <ul className="space-y-2.5 list-none">
-            {[
-              { label: 'Executive coaching', href: '/#what-we-do' },
-              { label: 'Career coaching', href: '/#what-we-do' },
-              { label: 'Learning strategy', href: '/#what-we-do' },
-              { label: "Brandon's page", href: '/brandon' },
-            ].map(({ label, href }) => (
+            <li>
+              <Link href="/brandon" className="text-[13px] text-white/65 hover:text-white/90 transition-colors duration-150">
+                About Brandon
+              </Link>
+            </li>
+            {['Executive coaching', 'Career coaching', 'Learning strategy'].map((label) => (
               <li key={label}>
-                <Link
-                  href={href}
-                  className="text-[13px] text-white/45 hover:text-white/85 transition-colors duration-150"
-                >
-                  {label}
-                </Link>
+                <span className="text-[13px] text-white/35">{label}</span>
               </li>
             ))}
+            <li>
+              <a href="https://www.linkedin.com/in/brandoncarson/" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/45 hover:text-white/85 transition-colors duration-150">
+                Brandon on LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
 

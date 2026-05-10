@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const MICHELLE_TOPICS = [
   {
-    title: 'AI strategy & workforce enablement',
+    title: 'AI strategy and enablement',
     desc: 'How HR and L&D leaders can build AI capability across their organizations — from governance frameworks to practical fluency programs. Actionable and grounded in real implementation.',
   },
   {
@@ -63,7 +63,7 @@ const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string
 ]
 
 const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: string; href?: string }[] = [
-  { event: 'ATD International Conference & Exposition', loc: 'Los Angeles', yr: '2025', href: 'https://atdconference.td.org/' },
+  { event: 'ATD International Conference & Exposition', loc: 'Los Angeles', yr: '2026', href: 'https://atdconference.td.org/' },
   { event: 'DevLearn', yr: '2025', href: 'https://devlearn.com/' },
   { event: 'ATD Asia-Pacific Conference', topic: 'Keynote', loc: 'Taiwan', yr: '2025', href: 'https://www.atdapc.org.tw/en' },
   { event: 'Stockholm Learning Conference', topic: 'Keynote', yr: '2025', href: 'https://learningconference.se/' },
@@ -71,11 +71,11 @@ const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: st
   { event: 'Paris iVentive', yr: '2025', href: 'https://iventiv.com/events/learning-futures/learning-futures-paris-executive-knowledge-exchange-5' },
   { event: 'ATD Southwest Learning Summit', topic: 'Keynote', loc: 'Dallas', yr: '2025', href: 'https://www.tddallas.org/event-5876369' },
   { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce (with Michelle Lentz)', yr: '2025', href: 'https://www.atdpugetsound.org/event-6272616' },
-  { event: 'Albany ATD', yr: '2025' },
+  { event: 'Albany ATD', topic: 'Keynote', yr: '2025' },
   { event: 'Learning Technologies', loc: 'London', yr: '2025', href: 'https://www.learningtechnologies.co.uk/' },
-  { event: 'Docebo Inspire', yr: '2025', href: 'https://inspire.docebo.com/' },
+  { event: 'Docebo Inspire', topic: 'Featured Speaker', yr: '2025', href: 'https://inspire.docebo.com/' },
   { event: 'ATD TechKnowledge', topic: 'Rock Stars L&D Panel', yr: '2025', href: 'https://techknowledge.td.org/' },
-  { event: 'TrainingPros Roundtable: Talent Sustainability', loc: 'Dallas', yr: '2024' },
+  { event: 'TrainingPros Roundtable: Talent Sustainability', topic: 'Keynote', loc: 'Dallas', yr: '2024' },
   { event: 'Houston ATD', topic: 'Closing Keynote', yr: '2024', href: 'https://tdhouston.org/' },
   { event: 'Cognota LearnOps Virtual Summit', topic: 'Leveraging an L&D Playbook to Improve Performance', yr: '2024', href: 'https://cognota.com/virtual-learnops-summit-2024/' },
 ]
@@ -163,9 +163,22 @@ export default function SpeakingPage() {
           >
             Speaker, facilitator, and explainer of complicated things.
           </h2>
-          <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-10">
+          <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-6">
             Michelle helps audiences make sense of emerging technology without losing the human thread. Her sessions blend AI strategy, change management, and enough creative energy to keep the room engaged. Open to alternative time zones, travel, and international engagements.
           </p>
+          <a
+            href="https://www.linkedin.com/in/michelleslentz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-white bg-emerald hover:bg-emerald-mid transition-colors px-4 py-2 rounded-3xl mb-10"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            Connect on LinkedIn
+          </a>
 
           {/* Testimonials */}
           <div className="flex flex-col md:flex-row gap-3 mb-10">
@@ -239,9 +252,22 @@ export default function SpeakingPage() {
           >
             International keynote speaker on leadership, learning, and the skills economy.
           </h2>
-          <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-10">
+          <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-6">
             Brandon brings 25+ years of enterprise L&D leadership to the stage — with a coaching sensibility and a systems perspective that resonates with executive and practitioner audiences alike.
           </p>
+          <a
+            href="https://www.linkedin.com/in/brandoncarson/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-2 rounded-3xl mb-10"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            Connect on LinkedIn
+          </a>
 
           {/* Topics */}
           <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-blue-600 mb-4">

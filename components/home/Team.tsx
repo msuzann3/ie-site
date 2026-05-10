@@ -7,9 +7,10 @@ const TEAM = [
     initials: 'ML',
     name: 'Michelle Lentz',
     role: 'AI strategy & enablement lead',
-    bio: '20+ years in enterprise L&D and change management. Published author, international keynote speaker, and AI curriculum developer. Currently completing an MS in AI in Business at Arizona State.',
+    bio: '20+ years in enterprise L&D and change management. Published author, international keynote speaker, and AI curriculum developer. MS in AI in Business, Arizona State University.',
     href: '/michelle',
-    linkLabel: "Visit Michelle's page",
+    linkLabel: 'About Michelle',
+    linkedin: 'https://www.linkedin.com/in/michelleslentz/',
     accentColor: '#4DD4A8',
     borderColor: 'rgba(11,143,104,0.4)',
     bgColor: 'rgba(11,143,104,0.25)',
@@ -25,7 +26,8 @@ const TEAM = [
     role: 'Executive coaching & learning strategy lead',
     bio: 'Decades of enterprise HR and L&D leadership, plus a thriving executive and career coaching practice. Helps individual leaders grow — and the learning ecosystems around them — at scale.',
     href: '/brandon',
-    linkLabel: "Visit Brandon's page",
+    linkLabel: 'About Brandon',
+    linkedin: 'https://www.linkedin.com/in/brandoncarson/',
     accentColor: '#93C5FD',
     borderColor: 'rgba(96,165,250,0.4)',
     bgColor: 'rgba(96,165,250,0.20)',
@@ -99,14 +101,30 @@ export default function Team() {
               {p.bio}
             </p>
 
-            <Link
-              href={p.href}
-              className={`inline-flex self-start items-center gap-2 text-[13px] text-white/90 py-2.5 px-[22px] rounded-3xl relative team-link-${p.variant}`}
-              style={{ border: '1px solid rgba(255,255,255,0.18)' }}
-            >
-              {p.linkLabel}{' '}
-              <span style={{ color: p.accentColor }}>→</span>
-            </Link>
+            <div className="flex flex-wrap gap-3 relative">
+              <a
+                href={p.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[13px] font-medium text-midnight py-2.5 px-[22px] rounded-3xl"
+                style={{ background: p.accentColor }}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                LinkedIn
+              </a>
+              <Link
+                href={p.href}
+                className={`inline-flex items-center gap-2 text-[13px] text-white/90 py-2.5 px-[22px] rounded-3xl team-link-${p.variant}`}
+                style={{ border: '1px solid rgba(255,255,255,0.18)' }}
+              >
+                {p.linkLabel}{' '}
+                <span style={{ color: p.accentColor }}>→</span>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
