@@ -48,18 +48,29 @@ const BRANDON_TOPICS = [
 const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string }[] = [
   { event: 'Training Magazine TechLearn Conference', topic: 'Stop Agreeing with Me: Escaping the AI Agreement Machine', yr: '2026', href: 'https://www.techlearnconference.com/' },
   { event: 'ATD International Conference and Exposition', topic: 'Brain, Heart, and Courage: Strengthening Critical Thinking with AI', yr: '2026', href: 'https://atdconference.td.org/' },
-  { event: 'ASU-GSV Summit', topic: 'ROI in the Age of AI: Lessons from the Field', yr: '2026' },
+  { event: 'ASU-GSV Summit', topic: 'ROI in the Age of AI: Lessons from the Field (with Dr. Angela Jackson)', yr: '2026' },
   { event: 'Learning Guild L&D Trends Online Conference', topic: 'Learning Leaders as AI Change Agents: Leading Transformation', yr: '2025', href: 'https://www.learningguild.com/online-events-archive/learning-leaders-as-ai-change-agents-leading-transformation' },
+  { event: 'Hone', topic: 'Masterclass: Bridging AI for Human Potential: Positive Change Management for Leaders', yr: '2025', href: 'https://app.honehq.com/classes/3952/masterclass-bridging-ai-for-human-potential-positive-change-management-for-leaders' },
   { event: 'ATD Asia-Pacific Conference, Taiwan', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework', yr: '2025', href: 'https://www.atdapc.org.tw/en' },
   { event: 'ATD OrgDev', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework for OD Leaders', yr: '2025', href: 'https://orgdev.td.org/' },
   { event: 'Training Magazine TechLearn', topic: 'Moving Right Along: Muppet Wisdom for Tech-Enhanced Learning', yr: '2025', href: 'https://www.techlearnconference.com/' },
   { event: 'ATD Core4', topic: 'Inspired Instructional Design: Muppet Magic for Next-Gen Learning', yr: '2025', href: 'https://core4.td.org/' },
+  { event: 'Association of National Advertisers Summer Council', topic: 'AI at Work: Leading Change, Building Skills', yr: '2025' },
+  { event: 'TrainingPros Corporate', topic: 'AI Ready or AI Hype for Recruiters: Buzzwords vs Ability', yr: '2025' },
   { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce', yr: '2025', href: 'https://www.atdpugetsound.org/event-6272616' },
   { event: 'SHRM Talent 2025', topic: 'Bridging AI & Human Potential: Positive Change Management for HR', yr: '2025', href: 'https://conferences.shrm.org/conference/2025-talent-conference-expo/' },
   { event: 'Clarity Consultants Webinar', topic: 'Critical Thinking & AI: Skills that Make AI Useful', yr: '2025', href: 'https://youtu.be/bMhSzhuDAiE?si=RzfQ1BFv8xbIfVKV' },
   { event: 'L&D Cares Webinar', topic: 'D for Doubt (Part 1 of the DUAL series, with Ben Eden)', yr: '2025', href: 'https://youtu.be/1IvevlJrGco?si=TCV2Kzjv4w_ffUvh' },
   { event: 'Training Magazine Conference', topic: 'The Future-Ready Instructional Designer: Thriving in an AI-Powered World', yr: '2025', href: 'https://www.trainingconference.com/2025/index.cfm' },
   { event: 'ATD TechKnowledge 2025', topic: 'TK Solve: AI (with Josh Cavalier and Joe Leslie)', yr: '2025', href: 'https://techknowledge.td.org/' },
+  { event: 'Go1 x Blinkist', topic: 'Design Thinking for AI Prompting', yr: '2024', href: 'https://www.go1.com/blog/master-ai-prompts-using-design-thinking' },
+]
+
+const MICHELLE_PODCASTS: { show: string; episode: string; yr: string; href?: string }[] = [
+  { show: 'TrainingPros Podcast', episode: 'Learning Leader Spotlight: Driving AI-Powered Change in L&D', yr: '2025', href: 'https://trainingpros.com/podcast-summary-driving-ai-powered-change-in-ld-with-michelle-lentz-of-innovate-elevate-strategies/' },
+  { show: 'Masie Center', episode: 'AI & Learning: A 360 Degree View — Panel with Elliott Masie, Richard Culotta, and David Farelly', yr: '2025' },
+  { show: 'Kallidus', episode: 'Will the Results of the U.S. Election Impact Your Next L&D Decision? — AI governance panel', yr: '2024' },
+  { show: 'Gyde.ai Navigate \'24', episode: 'Understanding Learner Behavior — Panel for L&D professionals', yr: '2024' },
 ]
 
 const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: string; href?: string }[] = [
@@ -80,8 +91,11 @@ const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: st
   { event: 'Cognota LearnOps Virtual Summit', topic: 'Leveraging an L&D Playbook to Improve Performance', yr: '2024', href: 'https://cognota.com/virtual-learnops-summit-2024/' },
 ]
 
-const MICHELLE_ARCHIVE = [
-  { event: 'Learning Guild Empowering ID with AI Online Conference', topic: 'Using AI to Transform Strategic Decision Making', yr: '2024' },
+const MICHELLE_ARCHIVE: { event: string; topic: string; yr: string; href?: string }[] = [
+  { event: 'Learning Guild Empowering ID with AI Online Conference', topic: 'Using AI to Transform Strategic Decision Making', yr: '2024', href: 'https://www.youtube.com/watch?v=2LU9Jq-rLSA' },
+  { event: 'Training Industry', topic: 'Retention Revolution: Strategies to Make Learning Stick', yr: '2024', href: 'https://www.youtube.com/watch?v=H7yt05_5SUU' },
+  { event: 'Learning Guild', topic: 'The Future-Focused ID: Your Career in the Age of AI (with Ellen Burns-Johnson)', yr: '2024', href: 'https://youtu.be/tghG3okLTOM' },
+  { event: 'ELB Learning', topic: 'Inspired Instructional Design: Lessons from the Muppets', yr: '2024', href: 'https://www.youtube.com/watch?v=svAbxS-r54s' },
   { event: 'ATD Houston Empower Talent Conference', topic: 'Down the Rabbit Hole: Design Thinking for AI', yr: '2024' },
   { event: 'Training Magazine TechLearn', topic: 'Beyond Pixels: Copyright and Ethics in AI and eLearning', yr: '2024' },
   { event: 'GovAI SLED Conference', topic: 'Preparing State and Local Government Workforces for AI Adoption', yr: '2024' },
@@ -217,7 +231,7 @@ export default function SpeakingPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4">
             Recent engagements
           </p>
-          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
+          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px] mb-12">
             {MICHELLE_RECENT.map((e) => (
               <div key={`${e.event}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
                 <div className="flex-1 min-w-0">
@@ -229,6 +243,28 @@ export default function SpeakingPage() {
                     <span className="text-[14px] text-midnight font-light">{e.event}</span>
                   )}
                   <span className="text-[13px] text-text-mid font-light"> · {e.topic}</span>
+                </div>
+                <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Podcasts & Interviews */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4">
+            Podcasts &amp; interviews
+          </p>
+          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
+            {MICHELLE_PODCASTS.map((e) => (
+              <div key={`${e.show}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
+                <div className="flex-1 min-w-0">
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
+                      {e.show}
+                    </a>
+                  ) : (
+                    <span className="text-[14px] text-midnight font-light">{e.show}</span>
+                  )}
+                  <span className="text-[13px] text-text-mid font-light"> · {e.episode}</span>
                 </div>
                 <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
               </div>
@@ -327,9 +363,15 @@ export default function SpeakingPage() {
           </h2>
           <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
             {MICHELLE_ARCHIVE.map((e) => (
-              <div key={`${e.event}-${e.yr}`} className="py-3 flex items-baseline gap-4 justify-between">
+              <div key={`${e.event}-${e.yr}-${e.topic}`} className="py-3 flex items-baseline gap-4 justify-between">
                 <div className="flex-1 min-w-0">
-                  <span className="text-[13px] text-midnight font-light">{e.event}</span>
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[13px] text-midnight font-light hover:text-emerald transition-colors">
+                      {e.event}
+                    </a>
+                  ) : (
+                    <span className="text-[13px] text-midnight font-light">{e.event}</span>
+                  )}
                   <span className="text-[12px] text-text-mid font-light"> · {e.topic}</span>
                 </div>
                 <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
