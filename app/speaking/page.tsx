@@ -66,6 +66,11 @@ const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string
   { event: 'Go1 x Blinkist', topic: 'Design Thinking for AI Prompting', yr: '2024', href: 'https://www.go1.com/blog/master-ai-prompts-using-design-thinking' },
 ]
 
+const MICHELLE_COURSES: { platform: string; course: string; yr: string; href?: string }[] = [
+  { platform: 'Ziplines Education', course: 'AI Essentials', yr: '2024–present', href: 'https://www.ziplines.com/courses/ai-prompting' },
+  { platform: 'Ziplines Education', course: 'AI Automation: AI Governance and Change Management', yr: '2025', href: 'https://www.ziplines.com/courses/ai-automation-course' },
+]
+
 const MICHELLE_PODCASTS: { show: string; episode: string; yr: string; href?: string }[] = [
   { show: 'TrainingPros Podcast', episode: 'Learning Leader Spotlight: Driving AI-Powered Change in L&D', yr: '2025', href: 'https://trainingpros.com/podcast-summary-driving-ai-powered-change-in-ld-with-michelle-lentz-of-innovate-elevate-strategies/' },
   { show: 'Masie Center', episode: 'AI & Learning: A 360 Degree View — Panel with Elliott Masie, Richard Culotta, and David Farelly', yr: '2025' },
@@ -243,6 +248,28 @@ export default function SpeakingPage() {
                     <span className="text-[14px] text-midnight font-light">{e.event}</span>
                   )}
                   <span className="text-[13px] text-text-mid font-light"> · {e.topic}</span>
+                </div>
+                <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Courses & Workshops */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4 mt-12">
+            Courses &amp; workshops
+          </p>
+          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px] mb-12">
+            {MICHELLE_COURSES.map((e) => (
+              <div key={`${e.platform}-${e.course}`} className="py-3.5 flex items-baseline gap-4 justify-between">
+                <div className="flex-1 min-w-0">
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
+                      {e.platform}
+                    </a>
+                  ) : (
+                    <span className="text-[14px] text-midnight font-light">{e.platform}</span>
+                  )}
+                  <span className="text-[13px] text-text-mid font-light"> · {e.course}</span>
                 </div>
                 <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
               </div>
