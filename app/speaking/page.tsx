@@ -55,27 +55,21 @@ const MICHELLE_RECENT: { event: string; topic: string; yr: string; href?: string
   { event: 'ATD OrgDev', topic: 'Humanizing AI Transformation: A Culture-Centered Change Framework for OD Leaders', yr: '2025', href: 'https://orgdev.td.org/' },
   { event: 'Training Magazine TechLearn', topic: 'Moving Right Along: Muppet Wisdom for Tech-Enhanced Learning', yr: '2025', href: 'https://www.techlearnconference.com/' },
   { event: 'ATD Core4', topic: 'Inspired Instructional Design: Muppet Magic for Next-Gen Learning', yr: '2025', href: 'https://core4.td.org/' },
+  { event: 'TrainingPros Podcast', topic: 'Learning Leader Spotlight: Driving AI-Powered Change in L&D', yr: '2025', href: 'https://trainingpros.com/podcast-summary-driving-ai-powered-change-in-ld-with-michelle-lentz-of-innovate-elevate-strategies/' },
   { event: 'Association of National Advertisers Summer Council', topic: 'AI at Work: Leading Change, Building Skills', yr: '2025' },
   { event: 'TrainingPros Corporate', topic: 'AI Ready or AI Hype for Recruiters: Buzzwords vs Ability', yr: '2025' },
   { event: 'ATD Puget Sound', topic: 'Building the AI-Powered Workforce', yr: '2025', href: 'https://www.atdpugetsound.org/event-6272616' },
+  { event: 'Masie Center', topic: 'AI & Learning: A 360 Degree View — Panel with Elliott Masie, Richard Culotta, and David Farelly', yr: '2025' },
   { event: 'SHRM Talent 2025', topic: 'Bridging AI & Human Potential: Positive Change Management for HR', yr: '2025', href: 'https://conferences.shrm.org/conference/2025-talent-conference-expo/' },
   { event: 'Clarity Consultants Webinar', topic: 'Critical Thinking & AI: Skills that Make AI Useful', yr: '2025', href: 'https://youtu.be/bMhSzhuDAiE?si=RzfQ1BFv8xbIfVKV' },
   { event: 'L&D Cares Webinar', topic: 'D for Doubt (Part 1 of the DUAL series, with Ben Eden)', yr: '2025', href: 'https://youtu.be/1IvevlJrGco?si=TCV2Kzjv4w_ffUvh' },
   { event: 'Training Magazine Conference', topic: 'The Future-Ready Instructional Designer: Thriving in an AI-Powered World', yr: '2025', href: 'https://www.trainingconference.com/2025/index.cfm' },
   { event: 'ATD TechKnowledge 2025', topic: 'TK Solve: AI (with Josh Cavalier and Joe Leslie)', yr: '2025', href: 'https://techknowledge.td.org/' },
+  { event: 'Ziplines Education', topic: 'AI Automation: AI Governance and Change Management', yr: '2025', href: 'https://www.ziplines.com/courses/ai-automation-course' },
+  { event: 'Kallidus', topic: 'Will the Results of the U.S. Election Impact Your Next L&D Decision? — AI governance panel', yr: '2024' },
   { event: 'Go1 x Blinkist', topic: 'Design Thinking for AI Prompting', yr: '2024', href: 'https://www.go1.com/blog/master-ai-prompts-using-design-thinking' },
-]
-
-const MICHELLE_COURSES: { platform: string; course: string; yr: string; href?: string }[] = [
-  { platform: 'Ziplines Education', course: 'AI Essentials', yr: '2024–present', href: 'https://www.ziplines.com/courses/ai-prompting' },
-  { platform: 'Ziplines Education', course: 'AI Automation: AI Governance and Change Management', yr: '2025', href: 'https://www.ziplines.com/courses/ai-automation-course' },
-]
-
-const MICHELLE_PODCASTS: { show: string; episode: string; yr: string; href?: string }[] = [
-  { show: 'TrainingPros Podcast', episode: 'Learning Leader Spotlight: Driving AI-Powered Change in L&D', yr: '2025', href: 'https://trainingpros.com/podcast-summary-driving-ai-powered-change-in-ld-with-michelle-lentz-of-innovate-elevate-strategies/' },
-  { show: 'Masie Center', episode: 'AI & Learning: A 360 Degree View — Panel with Elliott Masie, Richard Culotta, and David Farelly', yr: '2025' },
-  { show: 'Kallidus', episode: 'Will the Results of the U.S. Election Impact Your Next L&D Decision? — AI governance panel', yr: '2024' },
-  { show: 'Gyde.ai Navigate \'24', episode: 'Understanding Learner Behavior — Panel for L&D professionals', yr: '2024' },
+  { event: 'Gyde.ai Navigate \'24', topic: 'Understanding Learner Behavior — Panel for L&D professionals', yr: '2024' },
+  { event: 'Ziplines Education', topic: 'AI Essentials', yr: '2024–present', href: 'https://www.ziplines.com/courses/ai-prompting' },
 ]
 
 const BRANDON_ENGAGEMENTS: { event: string; topic?: string; loc?: string; yr: string; href?: string }[] = [
@@ -236,9 +230,9 @@ export default function SpeakingPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4">
             Recent engagements
           </p>
-          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px] mb-12">
+          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
             {MICHELLE_RECENT.map((e) => (
-              <div key={`${e.event}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
+              <div key={`${e.event}-${e.yr}-${e.topic}`} className="py-3.5 flex items-baseline gap-4 justify-between">
                 <div className="flex-1 min-w-0">
                   {e.href ? (
                     <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
@@ -248,50 +242,6 @@ export default function SpeakingPage() {
                     <span className="text-[14px] text-midnight font-light">{e.event}</span>
                   )}
                   <span className="text-[13px] text-text-mid font-light"> · {e.topic}</span>
-                </div>
-                <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Courses & Workshops */}
-          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4 mt-12">
-            Courses &amp; workshops
-          </p>
-          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px] mb-12">
-            {MICHELLE_COURSES.map((e) => (
-              <div key={`${e.platform}-${e.course}`} className="py-3.5 flex items-baseline gap-4 justify-between">
-                <div className="flex-1 min-w-0">
-                  {e.href ? (
-                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
-                      {e.platform}
-                    </a>
-                  ) : (
-                    <span className="text-[14px] text-midnight font-light">{e.platform}</span>
-                  )}
-                  <span className="text-[13px] text-text-mid font-light"> · {e.course}</span>
-                </div>
-                <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Podcasts & Interviews */}
-          <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-4">
-            Podcasts &amp; interviews
-          </p>
-          <div className="flex flex-col divide-y divide-[rgba(13,27,53,0.07)] max-w-[820px]">
-            {MICHELLE_PODCASTS.map((e) => (
-              <div key={`${e.show}-${e.yr}`} className="py-3.5 flex items-baseline gap-4 justify-between">
-                <div className="flex-1 min-w-0">
-                  {e.href ? (
-                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-[14px] text-midnight font-light hover:text-emerald transition-colors">
-                      {e.show}
-                    </a>
-                  ) : (
-                    <span className="text-[14px] text-midnight font-light">{e.show}</span>
-                  )}
-                  <span className="text-[13px] text-text-mid font-light"> · {e.episode}</span>
                 </div>
                 <span className="text-[12px] text-text-mid flex-shrink-0">{e.yr}</span>
               </div>
