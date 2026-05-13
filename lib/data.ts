@@ -38,6 +38,7 @@ export interface Publication {
   meta: string
   desc?: string
   href?: string
+  download?: boolean
 }
 
 export interface PubListItem {
@@ -208,6 +209,14 @@ export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
 ]
 
 export const BRANDON_PUBS: Publication[] = [
+  {
+    tag: 'eBook · Innovate + Elevate',
+    title: 'The AI-Powered Workforce: A CEO\'s Roadmap to Competitive Advantage',
+    desc: 'Six strategic actions organizations can take to prepare their workforce for the AI era — building AI literacy, governance, and capability so that L&D becomes a driver of business strategy, not a support function.',
+    meta: 'With Dr. Markus Bernhardt · Free download',
+    href: '/downloads/ai-powered-workforce.pdf',
+    download: true,
+  },
   {
     tag: 'Book · ATD Press',
     title: "L&D's Playbook for the Digital Age",
