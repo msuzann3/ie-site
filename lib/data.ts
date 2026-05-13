@@ -210,7 +210,7 @@ export const MICHELLE_PUBS_CONTRIBUTING: PubListItem[] = [
 
 export const BRANDON_PUBS: Publication[] = [
   {
-    tag: 'eBook · Innovate + Elevate',
+    tag: 'eBook',
     title: 'The AI-Powered Workforce: A CEO\'s Roadmap to Competitive Advantage',
     desc: 'Six strategic actions organizations can take to prepare their workforce for the AI era — building AI literacy, governance, and capability so that L&D becomes a driver of business strategy, not a support function.',
     meta: 'With Dr. Markus Bernhardt · Free download',
@@ -230,12 +230,5 @@ export const BRANDON_PUBS: Publication[] = [
     desc: 'Five forces are reshaping how people connect, communicate, and get work done — and what it means for how organizations must approach learning in a world that no longer waits.',
     meta: 'ATD Press',
     href: 'https://a.co/d/0980GhbF',
-  },
-  {
-    tag: 'Article series · ATD',
-    title: 'The AI-Powered Workforce Series',
-    desc: 'Explore six strategic actions that executive teams should take to prepare their L&D functions for the age of AI. Expert advice from Brandon Carson and Dr. Markus Bernhardt.',
-    meta: 'With Dr. Markus Bernhardt · ATD',
-    href: 'https://www.td.org/talent-development-leader-ai-resources',
   },
 ]
