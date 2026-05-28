@@ -9,15 +9,21 @@ Marketing site for [Innovate + Elevate](https://www.innovate-elevate.ai), a two-
 - Hosting: Netlify
 - Branch: `main`
 
-## Current Working Directory
+## Working Directories
 
-Primary local copy:
+This repo is used from iCloud Drive on more than one Mac. The current local copy on this Mac is:
+
+```sh
+/Users/michelle/Documents/_AI-Workspace/Codex/IE Claude Website/ie-site
+```
+
+Other Macs may use a different iCloud path, such as:
 
 ```sh
 /Users/dolly/Library/Mobile Documents/com~apple~CloudDocs/Documents/_AI-Workspace/Codex/IE Claude Website/ie-site
 ```
 
-Older Desktop copies may exist, but this iCloud workspace is the source of truth for current Codex work.
+GitHub is the source of truth for syncing between laptops. iCloud Drive is the local folder location, not the project history.
 
 ## Tech Stack
 
@@ -88,10 +94,16 @@ To remove the temporary home page banner, delete the `FeaturedDownload` import a
 Before starting work on any laptop:
 
 ```sh
-cd "/Users/dolly/Library/Mobile Documents/com~apple~CloudDocs/Documents/_AI-Workspace/Codex/IE Claude Website/ie-site"
+cd "path/to/IE Claude Website/ie-site"
 git status
 git pull origin main
 ```
+
+At the beginning of every Codex work session:
+
+- Check `README.md` for repo setup, workflow notes, and current conventions.
+- Check `CHANGELOG.md` for recent changes and handoff notes.
+- Check `git status` before editing so existing local work is not overwritten.
 
 After making changes:
 
@@ -101,6 +113,12 @@ git add .
 git commit -m "Describe the change"
 git push origin main
 ```
+
+At the end of every Codex work session:
+
+- Update `CHANGELOG.md` with the date, summary of changes, and any follow-up notes.
+- Update `README.md` when setup, deployment, project structure, or workflow changes.
+- Leave the repo in a clear state by reporting what changed, what was tested, and whether anything still needs to be committed or pushed.
 
 On the second laptop, run `git pull origin main` before asking Codex to continue. GitHub is the source of truth for syncing between laptops; iCloud Drive is only the local folder location for this machine.
 

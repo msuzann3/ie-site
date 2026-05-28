@@ -8,6 +8,7 @@ All notable project updates should be recorded here so both laptops and both Cod
 
 - Added this `CHANGELOG.md` to track site changes across laptops and Codex sessions.
 - Expanded `README.md` with project overview, repo details, local setup, deployment notes, and sync workflow.
+- Added the Codex working agreement: check `README.md`, `CHANGELOG.md`, and `git status` at the start of work; update `README.md` and `CHANGELOG.md` at the end of work.
 
 ## 2026-05-13
 
