@@ -20,6 +20,7 @@ All notable project updates should be recorded here so both laptops and both Cod
 public/CNAME
 ```
 
+- Configured the GitHub Pages workflow to use Node 24.
 - Removed the Netlify build configuration.
 - Removed the unused Netlify contact form component.
 
