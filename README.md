@@ -6,7 +6,7 @@ Marketing site for [Innovate + Elevate](https://www.innovate-elevate.ai), a two-
 
 - GitHub: https://github.com/msuzann3/ie-site
 - Production: https://www.innovate-elevate.ai
-- Hosting: Netlify
+- Hosting: GitHub Pages
 - Branch: `main`
 
 ## Working Directories
@@ -31,7 +31,7 @@ GitHub is the source of truth for syncing between laptops. iCloud Drive is the l
 - React 18
 - TypeScript 5
 - Tailwind CSS 3.4
-- Netlify with `@netlify/plugin-nextjs`
+- GitHub Pages static export
 - Plausible analytics
 
 ## Local Setup
@@ -126,15 +126,27 @@ If push prompts for credentials, use GitHub username `msuzann3` and a GitHub Per
 
 ## Deployment
 
-Netlify deploys from GitHub when `main` is pushed. Build settings are in `netlify.toml`:
+GitHub Pages deploys from GitHub when `main` is pushed. The workflow is:
 
-```toml
-[build]
-  command = "npm run build"
-  publish = ".next"
+```text
+.github/workflows/deploy-pages.yml
+```
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+The site uses Next.js static export (`output: 'export'`) and publishes the generated `out/` folder. The custom domain is preserved by:
+
+```text
+public/CNAME
+```
+
+GitHub Pages should be configured for this repository with:
+
+- Source: GitHub Actions
+- Custom domain: `www.innovate-elevate.ai`
+
+DNS for `www.innovate-elevate.ai` should point to GitHub Pages with a `CNAME` record to:
+
+```text
+msuzann3.github.io
 ```
 
 ## Known Follow-Up

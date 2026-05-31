@@ -3,6 +3,7 @@ import { ImageResponse } from 'next/og'
 export const alt = 'Michelle Lentz — AI Strategy & Workforce Enablement · Innovate + Elevate'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
+export const dynamic = 'force-static'
 
 async function loadSyne(): Promise<ArrayBuffer | null> {
   try {

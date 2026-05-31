@@ -2,6 +2,32 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-05-31
+
+### Changed
+
+- Switched production hosting notes from Netlify to GitHub Pages.
+- Configured Next.js for static export so the site can deploy from GitHub Pages.
+- Added a GitHub Actions Pages workflow:
+
+```text
+.github/workflows/deploy-pages.yml
+```
+
+- Added the custom domain file:
+
+```text
+public/CNAME
+```
+
+- Removed the Netlify build configuration.
+- Removed the unused Netlify contact form component.
+
+### Notes
+
+- GitHub Pages should use GitHub Actions as the Pages source.
+- DNS for `www.innovate-elevate.ai` should use a `CNAME` record pointing to `msuzann3.github.io`.
+
 ## 2026-05-28
 
 ### Added
