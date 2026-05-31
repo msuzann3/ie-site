@@ -26,8 +26,11 @@ public/CNAME
 
 ### Notes
 
-- GitHub Pages should use GitHub Actions as the Pages source.
-- DNS for `www.innovate-elevate.ai` should use a `CNAME` record pointing to `msuzann3.github.io`.
+- GitHub Pages is live with GitHub Actions as the Pages source.
+- The production URL is now `https://innovate-elevate.ai`.
+- `https://www.innovate-elevate.ai` redirects to the apex domain.
+- HTTPS enforcement is enabled in GitHub Pages.
+- DNS is configured with GitHub Pages `A` and `AAAA` records for the apex domain, plus a `www` CNAME pointing to `msuzann3.github.io`.
 
 ## 2026-05-28
 

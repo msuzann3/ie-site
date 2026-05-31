@@ -1,11 +1,12 @@
 # Innovate + Elevate Website
 
-Marketing site for [Innovate + Elevate](https://www.innovate-elevate.ai), a two-practice consulting firm led by Michelle Lentz and Brandon Carson.
+Marketing site for [Innovate + Elevate](https://innovate-elevate.ai), a two-practice consulting firm led by Michelle Lentz and Brandon Carson.
 
 ## Repo
 
 - GitHub: https://github.com/msuzann3/ie-site
-- Production: https://www.innovate-elevate.ai
+- Production: https://innovate-elevate.ai
+- Redirect: https://www.innovate-elevate.ai redirects to the apex domain
 - Hosting: GitHub Pages
 - Branch: `main`
 
@@ -138,10 +139,29 @@ The site uses Next.js static export (`output: 'export'`) and publishes the gener
 public/CNAME
 ```
 
-GitHub Pages should be configured for this repository with:
+GitHub Pages is configured for this repository with:
 
 - Source: GitHub Actions
-- Custom domain: `www.innovate-elevate.ai`
+- Custom domain: `innovate-elevate.ai`
+- Enforce HTTPS: enabled
+
+DNS for the apex domain should point to GitHub Pages with these `A` records:
+
+```text
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+It also has these GitHub Pages `AAAA` records for IPv6:
+
+```text
+2606:50c0:8000::153
+2606:50c0:8001::153
+2606:50c0:8002::153
+2606:50c0:8003::153
+```
 
 DNS for `www.innovate-elevate.ai` should point to GitHub Pages with a `CNAME` record to:
 
