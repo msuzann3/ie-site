@@ -1,5 +1,7 @@
 # Innovate + Elevate Website
 
+> Main project folder: this website should be worked from `Documents/_AI-Workspace/Codex/IE Claude Website/ie-site`.
+
 Marketing site for [Innovate + Elevate](https://innovate-elevate.ai), a two-practice consulting firm led by Michelle Lentz and Brandon Carson.
 
 ## Repo
@@ -12,7 +14,13 @@ Marketing site for [Innovate + Elevate](https://innovate-elevate.ai), a two-prac
 
 ## Working Directories
 
-This repo is used from iCloud Drive on more than one Mac. The current local copy on this Mac is:
+This repo is the main project folder for the Innovate + Elevate website. It is used from iCloud Drive on more than one Mac. The path may differ before `Documents`, especially on the MacBook Air named `dolly`, but it should always match from this segment onward:
+
+```text
+Documents/_AI-Workspace/Codex/IE Claude Website/ie-site
+```
+
+The current local copy on this Mac is:
 
 ```sh
 /Users/michelle/Documents/_AI-Workspace/Codex/IE Claude Website/ie-site
@@ -105,6 +113,7 @@ At the beginning of every Codex work session:
 - Check `README.md` for repo setup, workflow notes, and current conventions.
 - Check `CHANGELOG.md` for recent changes and handoff notes.
 - Check `git status` before editing so existing local work is not overwritten.
+- Treat this `ie-site` folder, not the parent `IE Claude Website` folder, as the website project root.
 
 After making changes:
 

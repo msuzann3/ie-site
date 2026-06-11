@@ -2,6 +2,20 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-06-11
+
+### Changed
+
+- Clarified that `ie-site` is the main project folder and source of truth for the Innovate + Elevate website.
+- Updated cross-laptop workflow notes to say the shared path should match from `Documents/_AI-Workspace/Codex/IE Claude Website/ie-site` onward.
+- Left the parent `IE Claude Website` README and changelog as pointers to the canonical files in `ie-site`.
+
+## 2026-06-01
+
+### Changed
+
+- Added a top-of-README note that the current working directory belongs in iCloud Drive under `Documents/_AI-Workspace/Codex`.
+
 ## 2026-05-31
 
 ### Changed
