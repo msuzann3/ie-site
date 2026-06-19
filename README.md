@@ -77,6 +77,7 @@ npm run lint
 - `/michelle` - Michelle Lentz profile
 - `/brandon` - Brandon Carson profile
 - `/speaking` - speaking engagements
+- `/ai-powered-workforce` - unlinked PDF view/download page for Brandon's eBook
 - `/privacy` - privacy policy
 - `/terms` - terms of use
 
@@ -88,6 +89,15 @@ npm run lint
 
 ```text
 /downloads/ai-powered-workforce.pdf
+```
+
+- Brandon's publication card and the unlinked direct-share page both use this
+  same PDF file, so replacing this file updates both places.
+
+- The unlinked direct-share page for viewing or downloading that PDF is:
+
+```text
+/ai-powered-workforce
 ```
 
 - Home page eBook promotion is handled by:

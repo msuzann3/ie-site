@@ -2,6 +2,29 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-06-19
+
+### Added
+
+- Added an unlinked direct-share page for Brandon's AI-Powered Workforce PDF:
+
+```text
+/ai-powered-workforce
+```
+
+- The page embeds the PDF for in-browser viewing and includes separate buttons to view the PDF in a new tab or download it.
+- Replaced the older PDF asset with the newly formatted version while keeping the existing download URL:
+
+```text
+public/downloads/ai-powered-workforce.pdf
+```
+
+### Notes
+
+- Brandon's existing eBook link and the new direct-share page now point to the same updated PDF file.
+- The page is intentionally not added to the nav or sitemap.
+- Page metadata asks search engines not to index or follow it.
+
 ## 2026-06-11
 
 ### Changed
