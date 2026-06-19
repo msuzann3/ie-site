@@ -91,8 +91,8 @@ npm run lint
 /downloads/ai-powered-workforce.pdf
 ```
 
-- Brandon's publication card and the unlinked direct-share page both use this
-  same PDF file, so replacing this file updates both places.
+- Brandon's publication card links to the unlinked direct-share page, which
+  opens in a new tab from the card and offers both PDF viewing and download.
 
 - The unlinked direct-share page for viewing or downloading that PDF is:
 

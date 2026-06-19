@@ -21,7 +21,8 @@ public/downloads/ai-powered-workforce.pdf
 
 ### Notes
 
-- Brandon's existing eBook link and the new direct-share page now point to the same updated PDF file.
+- Brandon's eBook publication card links to the direct-share page and opens it in a new tab.
+- The direct-share page points to the updated PDF file.
 - The page is intentionally not added to the nav or sitemap.
 - Page metadata asks search engines not to index or follow it.
 

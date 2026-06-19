@@ -213,9 +213,8 @@ export const BRANDON_PUBS: Publication[] = [
     tag: 'eBook',
     title: 'The AI-Powered Workforce: A CEO\'s Roadmap to Competitive Advantage',
     desc: 'Six strategic actions organizations can take to prepare their workforce for the AI era — building AI literacy, governance, and capability so that L&D becomes a driver of business strategy, not a support function.',
-    meta: 'With Dr. Markus Bernhardt · Free download',
-    href: '/downloads/ai-powered-workforce.pdf',
-    download: true,
+    meta: 'With Dr. Markus Bernhardt · View or download',
+    href: '/ai-powered-workforce',
   },
   {
     tag: 'Book · ATD Press',
