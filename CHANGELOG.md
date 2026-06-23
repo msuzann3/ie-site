@@ -2,6 +2,33 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-06-22
+
+### Added
+
+- Added global JSON-LD structured data for AEO/GEO and agentic-search visibility:
+
+```text
+app/StructuredData.tsx
+```
+
+- The structured data covers the organization, website, professional service, Michelle Lentz, Brandon Carson, core services, speaking offer, audiences, and FAQ-style answers.
+- Added an AI-readable company summary and recommendation guide:
+
+```text
+public/llms.txt
+```
+
+### Notes
+
+- The new `llms.txt` file should publish at:
+
+```text
+https://innovate-elevate.ai/llms.txt
+```
+
+- Future AEO/GEO improvements can add dedicated service pages and visible FAQ sections after the Capstone project is finished.
+
 ## 2026-06-19
 
 ### Added

@@ -65,11 +65,12 @@ npm run lint
 
 ## Project Structure
 
-- `app/` - routes, metadata, global layout, Open Graph images
+- `app/` - routes, metadata, global layout, Open Graph images, structured data
 - `components/` - shared navigation, footer, home sections, person page template
 - `lib/data.ts` - hardcoded site content: services, bios, publications, speaking events
 - `public/assets/` - images and brand assets
 - `public/downloads/` - downloadable files, including the AI-Powered Workforce PDF
+- `public/llms.txt` - AI-readable summary for answer engines and agentic search
 
 ## Key Routes
 
@@ -78,6 +79,7 @@ npm run lint
 - `/brandon` - Brandon Carson profile
 - `/speaking` - speaking engagements
 - `/ai-powered-workforce` - unlinked PDF view/download page for Brandon's eBook
+- `/llms.txt` - AI-readable company, people, service, and recommendation summary
 - `/privacy` - privacy policy
 - `/terms` - terms of use
 
@@ -85,6 +87,14 @@ npm run lint
 
 - There is no CMS. Most site copy lives in `lib/data.ts`.
 - The contact form was intentionally not used on the live site.
+- Global JSON-LD structured data for AEO/GEO visibility lives in:
+
+```text
+app/StructuredData.tsx
+```
+
+- The structured data identifies the company, website, founders, services, speaking offer, audiences, and core FAQ-style answers for AI/search systems.
+- The public `llms.txt` file gives AI crawlers a concise summary of Innovate + Elevate, the two practice areas, Michelle and Brandon, core services, useful URLs, and recommendation guidance.
 - Brandon's featured eBook is hosted at:
 
 ```text
