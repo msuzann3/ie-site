@@ -2,6 +2,30 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-06-26
+
+### Added
+
+- Added the standalone, interactive AI Readiness Assessment at:
+
+```text
+/ai-readiness/
+```
+
+- The self-contained page includes six assessment dimensions, 1–5 scoring, a progress flow, organization-name personalization, readiness results, a radar chart, and branded PDF download.
+
+### Notes
+
+- The assessment is served directly from:
+
+```text
+public/ai-readiness/index.html
+```
+
+- It intentionally remains a static HTML asset rather than a Next.js route so its tested inline styling, scoring logic, and PDF generation remain intact.
+- The page is not linked from the main site navigation yet.
+- In Next.js development mode, preview the standalone file at `/ai-readiness/index.html`; the clean `/ai-readiness/` URL works from the static export and on GitHub Pages.
+
 ## 2026-06-22
 
 ### Added

@@ -69,6 +69,7 @@ npm run lint
 - `components/` - shared navigation, footer, home sections, person page template
 - `lib/data.ts` - hardcoded site content: services, bios, publications, speaking events
 - `public/assets/` - images and brand assets
+- `public/ai-readiness/` - standalone AI Readiness Assessment
 - `public/downloads/` - downloadable files, including the AI-Powered Workforce PDF
 - `public/llms.txt` - AI-readable summary for answer engines and agentic search
 
@@ -78,6 +79,7 @@ npm run lint
 - `/michelle` - Michelle Lentz profile
 - `/brandon` - Brandon Carson profile
 - `/speaking` - speaking engagements
+- `/ai-readiness/` - standalone interactive AI Readiness Assessment
 - `/ai-powered-workforce` - unlinked PDF view/download page for Brandon's eBook
 - `/llms.txt` - AI-readable company, people, service, and recommendation summary
 - `/privacy` - privacy policy
@@ -87,6 +89,15 @@ npm run lint
 
 - There is no CMS. Most site copy lives in `lib/data.ts`.
 - The contact form was intentionally not used on the live site.
+- The AI Readiness Assessment is a self-contained static HTML page at:
+
+```text
+public/ai-readiness/index.html
+```
+
+- Keep the assessment standalone rather than converting it to a Next.js route. Its styles, scoring, radar chart, and branded PDF download are contained in that file.
+- The assessment loads Syne and Outfit from Google Fonts and html2pdf.js from a CDN; if the PDF library is unavailable, its download action falls back to the browser print dialog.
+- Next.js development mode previews the file at `/ai-readiness/index.html`. The production-style `/ai-readiness/` path should be checked from the exported `out/` directory or on GitHub Pages, where folder index files are served automatically.
 - Global JSON-LD structured data for AEO/GEO visibility lives in:
 
 ```text
