@@ -34,7 +34,8 @@ public/ai-readiness/index.html
 
 ### Changed
 
-- Updated the assessment's “Book a call” button to open Michelle's Google Calendar appointment schedule directly.
+- Updated the assessment's “Book a call” button to use the branded short booking link.
+- Added the website and branded booking URL to the rendered PDF footer.
 - Added an AI Readiness Assessment callout to the homepage.
 - Added an AI Readiness Assessment callout to Michelle's profile page.
 

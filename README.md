@@ -97,7 +97,7 @@ public/ai-readiness/index.html
 
 - Keep the assessment standalone rather than converting it to a Next.js route. Its styles, scoring, radar chart, and branded PDF download are contained in that file.
 - The assessment is promoted from the homepage by `components/home/AIReadiness.tsx` and from Michelle's profile within `components/person/PersonPage.tsx`.
-- Its results-page booking button links directly to Michelle's Google Calendar appointment schedule.
+- Its results-page booking button uses the branded short link `https://go.innovate-elevate.ai/meetwithmichelle`, which points to Michelle's appointment schedule.
 - The assessment loads Syne and Outfit from Google Fonts. The branded PDF generator is self-hosted at `public/ai-readiness/vendor/html2pdf.bundle.min.js`; if the PDF library is unavailable, its download action falls back to the browser print dialog.
 - Next.js development mode previews the file at `/ai-readiness/index.html`. The production-style `/ai-readiness/` path should be checked from the exported `out/` directory or on GitHub Pages, where folder index files are served automatically.
 - Global JSON-LD structured data for AEO/GEO visibility lives in:
