@@ -36,6 +36,7 @@ public/ai-readiness/index.html
 
 - Updated the assessment's “Book a call” button to use the branded short booking link.
 - Added the website and branded booking URL to the rendered PDF footer.
+- Reformatted the rendered PDF footer so the Innovate + Elevate next-step/contact block is visually separated from the required framework attribution and copyright fine print.
 - Added an AI Readiness Assessment callout to the homepage.
 - Added an AI Readiness Assessment callout to Michelle's profile page.
 
