@@ -278,6 +278,36 @@ export default function PersonPage({ data }: { data: PersonData }) {
         </div>
       </section>
 
+      {/* ── AI READINESS ASSESSMENT ── */}
+      {isInnovate && (
+        <section className="bg-white px-5 py-16 md:px-20 md:py-24">
+          <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto] md:items-center gap-8 rounded-[20px] bg-emerald-light px-7 py-9 md:px-10 md:py-10 border border-emerald/20">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-3">
+                Start with a baseline
+              </p>
+              <h2
+                className="font-display font-normal text-midnight leading-[1.2] mb-3"
+                style={{ fontSize: 'clamp(26px, 3.5vw, 38px)', letterSpacing: '-0.8px' }}
+              >
+                Assess your organization&apos;s AI readiness
+              </h2>
+              <p className="text-[15px] text-text-mid font-light leading-[1.75] max-w-[680px]">
+                See where your organization is strong—and where strategy, data,
+                adoption, or governance may need attention before you scale AI.
+              </p>
+            </div>
+            <a
+              href="/ai-readiness/"
+              className="inline-flex items-center justify-center gap-2 bg-midnight hover:bg-midnight-2 text-white hover:text-white no-underline text-sm font-medium py-3.5 px-7 rounded-[32px] transition-colors duration-150 whitespace-nowrap"
+            >
+              Take the assessment
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+      )}
+
       {/* ── PUBLICATIONS ── */}
       <section className="bg-white px-5 py-16 md:px-20 md:py-24">
         <p

@@ -26,6 +26,18 @@ public/ai-readiness/index.html
 - The page is not linked from the main site navigation yet.
 - In Next.js development mode, preview the standalone file at `/ai-readiness/index.html`; the clean `/ai-readiness/` URL works from the static export and on GitHub Pages.
 
+### Fixed
+
+- Fixed blank branded PDF downloads by rendering the report inside the browser capture area while a temporary preparation screen covers it.
+- Self-hosted the PDF generation library for the assessment so result downloads do not depend on the CDN being available.
+- Preserved white button text when hovering over the green results-page booking button.
+
+### Changed
+
+- Updated the assessment's “Book a call” button to open Michelle's Google Calendar appointment schedule directly.
+- Added an AI Readiness Assessment callout to the homepage.
+- Added an AI Readiness Assessment callout to Michelle's profile page.
+
 ## 2026-06-22
 
 ### Added

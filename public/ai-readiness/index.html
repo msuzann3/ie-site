@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="vendor/html2pdf.bundle.min.js"></script>
 <style>
   :root {
     --midnight:#0D1B35; --midnight-2:#152849;
@@ -63,7 +63,7 @@
   .btn-ghost { background:#fff; color:var(--midnight); border:1px solid var(--border-2); padding:12px 22px; }
   .btn-ghost:hover { background:var(--silver); }
   .btn-cta { background:var(--emerald); color:#fff; padding:14px 30px; border-radius:32px; }
-  .btn-cta:hover { background:var(--emerald-mid); }
+  .btn-cta:hover { background:var(--emerald-mid); color:#fff; text-decoration:none; }
   .center { text-align:center; }
 
   .topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px; }
@@ -309,7 +309,7 @@ function resultsHTML(){
     + '</div></div>'
     + '<div class="cta"><h2>Ready to accelerate your AI journey?</h2>'
     +   '<p>To take a deeper dive into your AI readiness and change management approach, reach out to Michelle at <a href="https://www.innovate-elevate.ai" target="_blank" rel="noopener">Innovate+Elevate Strategies</a>.</p>'
-    +   '<div style="margin-top:16px"><a class="btn btn-cta" href="https://www.innovate-elevate.ai" target="_blank" rel="noopener">Book a call &rarr;</a> <button class="btn btn-ghost no-print" onclick="downloadPDF(this)">&#8595; Download branded PDF</button></div>'
+    +   '<div style="margin-top:16px"><a class="btn btn-cta" href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ2COYiPLHiilk_rcfVM5_8uc2k92g4ATfp1RVY=" target="_blank" rel="noopener">Book a call &rarr;</a> <button class="btn btn-ghost no-print" onclick="downloadPDF(this)">&#8595; Download branded PDF</button></div>'
     +   '<div class="contact">michelle@innovate-elevate.ai &middot; innovate-elevate.ai &middot; Seattle, WA</div>'
     + '</div>'
     + footerHTML();
@@ -342,7 +342,7 @@ function buildReportHTML(scores){
   return ''
     + '<div style="font-family:Outfit,sans-serif;color:'+C+';padding:30px 34px;background:#fff">'
     +   '<div style="text-align:center;margin-bottom:14px">'
-    +     '<svg viewBox="0 0 520 80" height="38" style="display:block;margin:0 auto"><text x="260" y="58" text-anchor="middle" font-family="Syne, sans-serif" font-size="48" font-weight="400" letter-spacing="-1"><tspan fill="#0D1B35">Innovate </tspan><tspan fill="#0B8F68">+</tspan><tspan fill="#0D1B35"> Elevate</tspan></text></svg>'
+    +     '<div style="font-family:Syne,sans-serif;font-size:28px;font-weight:400;letter-spacing:-0.8px;line-height:1.1;color:#0D1B35">Innovate <span style="color:#0B8F68">+</span> Elevate</div>'
     +     '<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:'+EM+';margin-top:12px">AI Readiness Results</div>'
     +     (orgName?'<div style="font-size:15px;font-weight:500;margin-top:6px">Prepared for '+escHtml(orgName)+'</div>':'')
     +     '<div style="font-size:12px;color:'+MUTED+';margin-top:'+(orgName?'2px':'6px')+'">'+dateStr()+'</div>'
@@ -372,13 +372,21 @@ async function downloadPDF(btn){
   const filename = 'AI-Readiness-Results'+safeOrg+'.pdf';
   const el=document.createElement('div');
   el.innerHTML=buildReportHTML(scores);
-  el.style.cssText='position:fixed;left:-10000px;top:0;width:720px;background:#fff;';
+  el.style.cssText='position:absolute;left:0;top:0;width:720px;background:#fff;z-index:2147483646;';
+  const report=el.firstElementChild;
+  if(report){ report.style.width='720px'; report.style.minHeight='1px'; }
+  const cover=document.createElement('div');
+  cover.style.cssText='position:fixed;inset:0;z-index:2147483647;background:#F8FAFC;display:flex;align-items:center;justify-content:center;font-family:Outfit,sans-serif;color:#0D1B35;font-weight:500;';
+  cover.textContent='Preparing your branded PDF…';
   document.body.appendChild(el);
+  document.body.appendChild(cover);
   const label = btn ? btn.innerHTML : '';
   if(btn){ btn.disabled=true; btn.innerHTML='Preparing PDF…'; }
   try{
     if(!window.html2pdf) throw new Error('lib missing');
     if(document.fonts && document.fonts.ready){ try{ await document.fonts.ready; }catch(e){} }
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    el.style.height = Math.max(el.scrollHeight, report ? report.scrollHeight : 0, 1) + 'px';
     await html2pdf().set({
       margin:[18,18,18,18],
       filename:filename,
@@ -386,11 +394,14 @@ async function downloadPDF(btn){
       html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff'},
       jsPDF:{unit:'pt',format:'letter',orientation:'portrait'},
       pagebreak:{mode:['css','legacy']}
-    }).from(el).save();
+    }).from(report || el).save();
   }catch(e){
+    el.remove();
+    cover.remove();
     window.print(); // offline / library-blocked fallback
   }finally{
-    el.remove();
+    if(el.isConnected) el.remove();
+    if(cover.isConnected) cover.remove();
     if(btn){ btn.disabled=false; btn.innerHTML=label; }
   }
 }
