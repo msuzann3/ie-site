@@ -11,6 +11,7 @@ All notable project updates should be recorded here so both laptops and both Cod
 - Added a homepage bio link to `https://www.michelleslentz.com` that opens in a new tab so visitors can learn more about Michelle's speaking, writing, and professional background.
 - Removed coaching from the site's visible copy, service list, contact options, metadata, social preview, structured data, speaking topics, terms, and AI-readable `llms.txt` summary.
 - Repositioned Elevate around leadership development, skills strategy, learning strategy, and learning ecosystem transformation.
+- Renamed the homepage “Philosophy” section and navigation link to “Ways of work.”
 
 ### Notes
 

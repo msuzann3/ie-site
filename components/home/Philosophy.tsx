@@ -2,9 +2,9 @@ import { PILLARS } from '@/lib/data'
 
 export default function Philosophy() {
   return (
-    <section id="philosophy" className="bg-midnight text-white px-5 py-16 md:px-20 md:py-24">
+    <section id="ways-of-work" className="bg-midnight text-white px-5 py-16 md:px-20 md:py-24">
       <p className="text-[11px] font-semibold uppercase tracking-[0.125rem] mb-3" style={{ color: 'rgba(11,143,104,0.85)' }}>
-        Our belief
+        Ways of work
       </p>
       <h2
         className="font-display font-normal text-white leading-snug tracking-section mb-4 max-w-[580px]"
