@@ -17,7 +17,7 @@ const structuredData = {
       },
       areaServed: ['United States', 'Global'],
       description:
-        'Innovate + Elevate is a two-practice consulting firm helping HR and L&D leaders adopt AI, build governance, enable their workforce, and develop leaders through executive coaching and learning strategy.',
+        'Innovate + Elevate is a two-practice consulting firm helping HR and L&D leaders adopt AI, build governance, enable their workforce, and strengthen leadership, skills, and learning strategy.',
       knowsAbout: [
         'AI strategy',
         'AI governance',
@@ -25,7 +25,6 @@ const structuredData = {
         'Workforce AI enablement',
         'AI fluency',
         'Learning and development',
-        'Executive coaching',
         'Leadership development',
         'Skills strategy',
         'Learning ecosystem design',
@@ -35,8 +34,8 @@ const structuredData = {
         'https://www.linkedin.com/in/brandoncarson/',
       ],
       founder: [
-        { '@id': `${siteUrl}/michelle#person` },
-        { '@id': `${siteUrl}/brandon#person` },
+        { '@id': `${siteUrl}/#michelle-person` },
+        { '@id': `${siteUrl}/#brandon-person` },
       ],
     },
     {
@@ -77,7 +76,7 @@ const structuredData = {
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Consulting, coaching, and speaking services',
+        name: 'Consulting and speaking services',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -93,10 +92,6 @@ const structuredData = {
           },
           {
             '@type': 'Offer',
-            itemOffered: { '@id': `${siteUrl}/#executive-coaching-service` },
-          },
-          {
-            '@type': 'Offer',
             itemOffered: { '@id': `${siteUrl}/#learning-strategy-service` },
           },
           {
@@ -108,9 +103,9 @@ const structuredData = {
     },
     {
       '@type': 'Person',
-      '@id': `${siteUrl}/michelle#person`,
+      '@id': `${siteUrl}/#michelle-person`,
       name: 'Michelle Lentz',
-      url: `${siteUrl}/michelle`,
+      url: `${siteUrl}/#team`,
       image: `${siteUrl}/assets/michelle.jpg`,
       jobTitle: 'AI strategy and workforce enablement lead',
       worksFor: { '@id': `${siteUrl}/#organization` },
@@ -132,23 +127,21 @@ const structuredData = {
     },
     {
       '@type': 'Person',
-      '@id': `${siteUrl}/brandon#person`,
+      '@id': `${siteUrl}/#brandon-person`,
       name: 'Brandon Carson',
-      url: `${siteUrl}/brandon`,
+      url: `${siteUrl}/#team`,
       image: `${siteUrl}/assets/brandon.jpg`,
-      jobTitle: 'Executive coaching and learning strategy lead',
+      jobTitle: 'Learning strategy and leadership development lead',
       worksFor: { '@id': `${siteUrl}/#organization` },
       sameAs: ['https://www.linkedin.com/in/brandoncarson/'],
       knowsAbout: [
-        'Executive coaching',
-        'Career coaching',
         'Leadership development',
         'Learning strategy',
         'Skills strategy',
         'L&D transformation',
       ],
       description:
-        'Brandon Carson leads the Elevate practice, advising HR and L&D leaders on coaching, leadership development, skills strategy, and learning ecosystem transformation.',
+        'Brandon Carson leads the Elevate practice, advising HR and L&D leaders on leadership development, skills strategy, and learning ecosystem transformation.',
     },
     {
       '@type': 'Service',
@@ -182,16 +175,6 @@ const structuredData = {
     },
     {
       '@type': 'Service',
-      '@id': `${siteUrl}/#executive-coaching-service`,
-      name: 'Executive and career coaching',
-      serviceType: 'Executive coaching',
-      provider: { '@id': `${siteUrl}/#organization` },
-      audience: { '@type': 'Audience', audienceType: 'Senior and emerging leaders' },
-      description:
-        'One-on-one coaching for senior leaders, emerging leaders, and professionals navigating new roles, expanded scope, or deliberate career growth.',
-    },
-    {
-      '@type': 'Service',
       '@id': `${siteUrl}/#learning-strategy-service`,
       name: 'Learning strategy and ecosystem design',
       serviceType: 'Learning and development strategy consulting',
@@ -219,7 +202,7 @@ const structuredData = {
           name: 'What does Innovate + Elevate do?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Innovate + Elevate helps HR and L&D leaders adopt AI responsibly, build workforce capability, strengthen learning strategy, and develop leaders through executive coaching.',
+            text: 'Innovate + Elevate helps HR and L&D leaders adopt AI responsibly, build workforce capability, strengthen learning strategy, and develop leadership at scale.',
           },
         },
         {
@@ -235,7 +218,7 @@ const structuredData = {
           name: 'Who leads Innovate + Elevate?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Innovate + Elevate is led by Michelle Lentz, who leads AI strategy and enablement, and Brandon Carson, who leads executive coaching and learning strategy.',
+            text: 'Innovate + Elevate is led by Michelle Lentz, who leads AI strategy and enablement, and Brandon Carson, who leads learning strategy and leadership development.',
           },
         },
       ],

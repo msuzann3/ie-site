@@ -66,7 +66,7 @@ npm run lint
 ## Project Structure
 
 - `app/` - routes, metadata, global layout, Open Graph images, structured data
-- `components/` - shared navigation, footer, home sections, person page template
+- `components/` - shared navigation, footer, and home sections
 - `lib/data.ts` - hardcoded site content: services, bios, publications, speaking events
 - `public/assets/` - images and brand assets
 - `public/ai-readiness/` - standalone AI Readiness Assessment
@@ -76,8 +76,6 @@ npm run lint
 ## Key Routes
 
 - `/` - home
-- `/michelle` - Michelle Lentz profile
-- `/brandon` - Brandon Carson profile
 - `/speaking` - speaking engagements
 - `/ai-readiness/` - standalone interactive AI Readiness Assessment
 - `/ai-powered-workforce` - unlinked PDF view/download page for Brandon's eBook
@@ -96,7 +94,7 @@ public/ai-readiness/index.html
 ```
 
 - Keep the assessment standalone rather than converting it to a Next.js route. Its styles, scoring, radar chart, and branded PDF download are contained in that file.
-- The assessment is promoted from the homepage by `components/home/AIReadiness.tsx` and from Michelle's profile within `components/person/PersonPage.tsx`.
+- The assessment is promoted from the homepage by `components/home/AIReadiness.tsx`.
 - Its results-page booking button uses the branded short link `https://go.innovate-elevate.ai/meetwithmichelle`, which points to Michelle's appointment schedule.
 - The assessment loads Syne and Outfit from Google Fonts. The branded PDF generator is self-hosted at `public/ai-readiness/vendor/html2pdf.bundle.min.js`; if the PDF library is unavailable, its download action falls back to the browser print dialog.
 - The PDF footer intentionally separates the Innovate + Elevate contact/booking callout from the required framework attribution and copyright text so the next-step CTA does not get buried in the legal copy.
@@ -109,6 +107,9 @@ app/StructuredData.tsx
 
 - The structured data identifies the company, website, founders, services, speaking offer, audiences, and core FAQ-style answers for AI/search systems.
 - The public `llms.txt` file gives AI crawlers a concise summary of Innovate + Elevate, the two practice areas, Michelle and Brandon, core services, useful URLs, and recommendation guidance.
+- Michelle and Brandon are introduced in short homepage bios in `components/home/Team.tsx`; the site does not publish separate profile routes.
+- Michelle's homepage bio links to `https://www.michelleslentz.com` in a new tab for her full speaking, writing, and professional background.
+- Coaching is intentionally not offered or described on this site.
 - Brandon's featured eBook is hosted at:
 
 ```text

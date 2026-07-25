@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Speaking — Innovate + Elevate',
   description:
-    'Keynotes, workshops, and conference sessions on AI strategy, workforce transformation, executive coaching, and the future of HR & L&D.',
+    'Keynotes, workshops, and conference sessions on AI strategy, workforce transformation, leadership development, and the future of HR & L&D.',
 }
 
 const MICHELLE_TOPICS = [
@@ -40,7 +39,7 @@ const BRANDON_TOPICS = [
     desc: 'The transformation required for L&D to earn a strategic seat — new scope, new stakeholder relationships, new ways of demonstrating value.',
   },
   {
-    title: 'Executive coaching for the AI era',
+    title: 'Leadership in the AI era',
     desc: 'How senior leaders need to adapt their decision-making, communication, and team development practices as AI reshapes the workplace.',
   },
 ]
@@ -266,7 +265,7 @@ export default function SpeakingPage() {
             International keynote speaker on leadership, learning, and the skills economy.
           </h2>
           <p className="text-[15px] text-text-mid font-light leading-relaxed max-w-[620px] mb-6">
-            Brandon brings 25+ years of enterprise L&D leadership to the stage — with a coaching sensibility and a systems perspective that resonates with executive and practitioner audiences alike.
+            Brandon brings 25+ years of enterprise L&D leadership to the stage — with a people-centered approach and a systems perspective that resonates with executive and practitioner audiences alike.
           </p>
           <a
             href="https://www.linkedin.com/in/brandoncarson/"
@@ -380,18 +379,6 @@ export default function SpeakingPage() {
             >
               speaking@innovate-elevate.ai
             </a>
-            <Link
-              href="/michelle"
-              className="inline-flex items-center justify-center text-[14px] font-medium text-white/70 hover:text-white border border-white/20 hover:border-white/40 transition-colors px-5 py-3 rounded-3xl"
-            >
-              Michelle&apos;s full profile
-            </Link>
-            <Link
-              href="/brandon"
-              className="inline-flex items-center justify-center text-[14px] font-medium text-white/70 hover:text-white border border-white/20 hover:border-white/40 transition-colors px-5 py-3 rounded-3xl"
-            >
-              Brandon&apos;s full profile
-            </Link>
           </div>
         </div>
       </section>

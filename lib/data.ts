@@ -79,13 +79,6 @@ export const SERVICES: Service[] = [
   {
     side: 'elevate',
     sideLabel: 'Elevate',
-    icon: 'ArrowUp',
-    title: 'Executive & career coaching',
-    desc: 'One-on-one work with senior leaders navigating new roles and expanded scope, and with emerging leaders making deliberate moves into management or across functions.',
-  },
-  {
-    side: 'elevate',
-    sideLabel: 'Elevate',
     icon: 'Target',
     title: 'Skills & skills-first strategy',
     desc: 'Advisory for organizations building skills-based talent models — from skills taxonomy design to integrating skills frameworks into hiring, learning, and career development.',
@@ -115,12 +108,12 @@ export const PILLARS: Pillar[] = [
   {
     n: '02',
     title: 'People always',
-    desc: 'Behind every initiative is a leader being asked to operate differently. Coaching is how that change actually lands — not as a memo, but as a person.',
+    desc: 'Behind every initiative are people being asked to operate differently. Change lands through clear leadership, practical support, and learning built around the humans doing the work.',
   },
   {
     n: '03',
     title: 'Both, integrated',
-    desc: "You don't choose between transforming the org and developing the leaders inside it. The two practices reinforce each other — that's why we built one firm around both.",
+    desc: "You don't choose between transforming the organization and developing the capability inside it. The two practices reinforce each other — that's why we built one firm around both.",
   },
 ]
 

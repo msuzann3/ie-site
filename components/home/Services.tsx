@@ -11,12 +11,12 @@ export default function Services() {
         one engagement model
       </h2>
       <p className="section-desc">
-        Some clients come for the AI work. Some come for the coaching. Many come
-        for both — because organizational change rarely respects the line between
-        the two.
+        Some clients come for AI strategy. Others come for learning and
+        leadership transformation. Many need both — because organizational
+        change rarely respects the line between systems and people.
       </p>
 
-      {/* 3×2 grid with hairline dividers via gap + bg trick */}
+      {/* Service grid with hairline dividers via gap + bg trick */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-[20px] overflow-hidden border border-midnight/[0.09]"
         style={{ gap: '1px', background: 'rgba(13,27,53,0.09)' }}

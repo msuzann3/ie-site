@@ -21,9 +21,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://innovate-elevate.ai'),
-  title: 'Innovate + Elevate — AI strategy and executive coaching for HR & L&D leaders',
+  title: 'Innovate + Elevate — AI strategy and workforce transformation for HR & L&D leaders',
   description:
-    'Two practices under one roof: AI strategy, governance, and workforce enablement (Innovate) + executive and career coaching, learning strategy (Elevate).',
+    'Two practices under one roof: AI strategy, governance, and workforce enablement (Innovate) + leadership development, skills strategy, and learning transformation (Elevate).',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Content — staggered fade-up */}
       <div className="hero-content relative flex flex-col">
         <p className="animate-fade-up opacity-0 text-[11px] font-semibold uppercase tracking-[0.125rem] text-emerald mb-3">
-          AI strategy &amp; executive coaching
+          AI strategy &amp; workforce transformation
         </p>
 
         <h1
@@ -52,8 +52,8 @@ export default function Hero() {
           className="animate-fade-up opacity-0 text-[18px] text-white/[0.62] max-w-[560px] leading-[1.7] font-light mb-10"
         >
           We help HR and L&D leaders adopt AI without losing the humans inside
-          the org chart. Two practices — AI strategy and executive coaching —
-          under one roof, because the work is rarely just one or the other.
+          the org chart. Two practices — AI strategy and workforce capability —
+          under one roof, because transformation takes both systems and people.
         </p>
 
         <div className="animate-fade-up opacity-0 flex gap-3.5 flex-wrap">

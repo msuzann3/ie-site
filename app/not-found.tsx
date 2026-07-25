@@ -53,16 +53,10 @@ export default function NotFound() {
             Back to home
           </Link>
           <Link
-            href="/michelle"
+            href="/speaking"
             className="inline-flex items-center justify-center text-[14px] text-white/70 hover:text-white border border-white/20 hover:border-white/40 transition-colors px-6 py-3 rounded-3xl"
           >
-            About Michelle
-          </Link>
-          <Link
-            href="/brandon"
-            className="inline-flex items-center justify-center text-[14px] text-white/70 hover:text-white border border-white/20 hover:border-white/40 transition-colors px-6 py-3 rounded-3xl"
-          >
-            About Brandon
+            Speaking
           </Link>
         </div>
       </div>

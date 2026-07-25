@@ -12,7 +12,7 @@ export default function Footer() {
             Innovate <span className="text-emerald">+</span> Elevate
           </div>
           <p className="text-[13px] text-white/40 font-light leading-relaxed mb-5 max-w-[240px]">
-            AI strategy and executive coaching for HR and L&D leaders.
+            AI strategy, workforce capability, and learning transformation for HR and L&amp;D leaders.
           </p>
           <a
             href="mailto:info@innovate-elevate.ai"
@@ -28,11 +28,6 @@ export default function Footer() {
             Innovate · AI
           </div>
           <ul className="space-y-2.5 list-none">
-            <li>
-              <Link href="/michelle" className="text-[13px] text-white/65 hover:text-white/90 transition-colors duration-150">
-                About Michelle
-              </Link>
-            </li>
             {['AI strategy', 'Governance & ethics', 'Workforce enablement'].map((label) => (
               <li key={label}>
                 <span className="text-[13px] text-white/35">{label}</span>
@@ -49,15 +44,10 @@ export default function Footer() {
         {/* Elevate */}
         <div>
           <div className="text-[11px] tracking-[0.075rem] uppercase text-white/30 font-semibold mb-4">
-            Elevate · Coaching
+            Elevate · Learning
           </div>
           <ul className="space-y-2.5 list-none">
-            <li>
-              <Link href="/brandon" className="text-[13px] text-white/65 hover:text-white/90 transition-colors duration-150">
-                About Brandon
-              </Link>
-            </li>
-            {['Executive coaching', 'Career coaching', 'Learning strategy'].map((label) => (
+            {['Leadership development', 'Skills strategy', 'Learning strategy'].map((label) => (
               <li key={label}>
                 <span className="text-[13px] text-white/35">{label}</span>
               </li>
@@ -79,7 +69,6 @@ export default function Footer() {
             {[
               { label: 'info@innovate-elevate.ai', href: 'mailto:info@innovate-elevate.ai' },
               { label: 'Schedule with Michelle', href: 'https://go.innovate-elevate.ai/meetwithmichelle' },
-              { label: 'Schedule with Brandon', href: 'https://go.innovate-elevate.ai/meetwithbrandon' },
               { label: 'Speaking inquiries', href: 'mailto:speaking@innovate-elevate.ai' },
             ].map(({ label, href }) => (
               <li key={label}>

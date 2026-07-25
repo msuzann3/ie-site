@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Innovate + Elevate — AI strategy and executive coaching for HR and L&D leaders'
+export const alt = 'Innovate + Elevate — AI strategy and workforce transformation for HR and L&D leaders'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 export const dynamic = 'force-static'
@@ -128,7 +128,7 @@ export default async function Image() {
               maxWidth: '680px',
             }}
           >
-            AI strategy and executive coaching for HR and L&D leaders.
+            AI strategy and workforce transformation for HR and L&amp;D leaders.
           </div>
         </div>
 

@@ -16,8 +16,9 @@ export default function Philosophy() {
       </h2>
       <p className="text-base text-white/55 max-w-[540px] leading-relaxed font-light mb-[52px]">
         The technology mostly works. The hard part — always — is the humans, and
-        the systems they work inside. Strategy without coaching stalls. Coaching
-        without strategy drifts. We do both because organizations need both.
+        the systems they work inside. Strategy without enablement stalls.
+        Capability without strategy drifts. We connect both because
+        organizations need both.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

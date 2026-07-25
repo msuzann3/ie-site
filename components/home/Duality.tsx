@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Duality() {
   return (
     <section className="bg-white border-t border-b border-midnight/[0.09] grid grid-cols-1 md:grid-cols-2">
@@ -25,12 +23,7 @@ export default function Duality() {
         <div className="flex items-center gap-3 text-[13px] text-midnight">
           <strong className="font-medium">Michelle Lentz</strong>
           <span className="text-text-mid">·</span>
-          <Link
-            href="/michelle"
-            className="text-emerald font-medium hover:text-emerald-mid transition-colors duration-150"
-          >
-            Visit her page →
-          </Link>
+          <span className="text-emerald font-medium">AI strategy &amp; enablement</span>
         </div>
       </div>
 
@@ -47,25 +40,20 @@ export default function Duality() {
           className="font-display font-normal text-midnight tracking-[-0.05rem] leading-[1.15] mb-4 max-w-[440px]"
           style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
         >
-          The executive and career coaching that turns capability into{' '}
-          <em style={{ color: '#2563EB' }}>leadership</em>.
+          The learning and leadership systems that turn strategy into{' '}
+          <em style={{ color: '#2563EB' }}>capability</em>.
         </h3>
         <p className="text-[15px] text-text-mid leading-[1.75] font-light max-w-[440px] mb-7">
-          Brandon leads our coaching practice — working one-on-one with leaders,
-          and shaping the learning ecosystems that develop them at scale. Career
-          coaching, executive coaching, and capability strategy for HR and L&D
-          teams.
+          Brandon leads our learning and leadership practice — shaping the
+          strategies, programs, and ecosystems that develop workforce capability
+          at scale.
         </p>
         <div className="flex items-center gap-3 text-[13px] text-midnight">
           <strong className="font-medium">Brandon Carson</strong>
           <span className="text-text-mid">·</span>
-          <Link
-            href="/brandon"
-            className="font-medium hover:opacity-80 transition-opacity duration-150"
-            style={{ color: '#2563EB' }}
-          >
-            Visit his page →
-          </Link>
+          <span className="font-medium" style={{ color: '#2563EB' }}>
+            Learning strategy &amp; leadership development
+          </span>
         </div>
       </div>
     </section>

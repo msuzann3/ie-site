@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const TEAM = [
   {
     variant: 'innovate' as const,
@@ -8,8 +6,7 @@ const TEAM = [
     name: 'Michelle Lentz',
     role: 'AI strategy & enablement lead',
     bio: '20+ years in enterprise L&D and change management. Published author, international keynote speaker, and AI curriculum developer. MS in AI in Business, Arizona State University.',
-    href: '/michelle',
-    linkLabel: 'About Michelle',
+    website: 'https://www.michelleslentz.com',
     linkedin: 'https://www.linkedin.com/in/michelleslentz/',
     accentColor: '#4DD4A8',
     borderColor: 'rgba(11,143,104,0.4)',
@@ -23,10 +20,9 @@ const TEAM = [
     side: 'Elevate',
     initials: 'BC',
     name: 'Brandon Carson',
-    role: 'Executive coaching & learning strategy lead',
-    bio: 'Decades of enterprise HR and L&D leadership, plus a thriving executive and career coaching practice. Helps individual leaders grow — and the learning ecosystems around them — at scale.',
-    href: '/brandon',
-    linkLabel: 'About Brandon',
+    role: 'Learning strategy & leadership development lead',
+    bio: 'More than 25 years in enterprise HR and L&D leadership. Published author and international speaker who helps organizations strengthen leadership, skills strategy, and learning ecosystems at scale.',
+    website: undefined,
     linkedin: 'https://www.linkedin.com/in/brandoncarson/',
     accentColor: '#93C5FD',
     borderColor: 'rgba(96,165,250,0.4)',
@@ -102,6 +98,18 @@ export default function Team() {
             </p>
 
             <div className="flex flex-wrap gap-3 relative">
+              {p.website && (
+                <a
+                  href={p.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[13px] text-white/90 py-2.5 px-[22px] rounded-3xl"
+                  style={{ border: '1px solid rgba(255,255,255,0.18)' }}
+                >
+                  Learn more about Michelle
+                  <span style={{ color: p.accentColor }}>↗</span>
+                </a>
+              )}
               <a
                 href={p.linkedin}
                 target="_blank"
@@ -116,14 +124,6 @@ export default function Team() {
                 </svg>
                 LinkedIn
               </a>
-              <Link
-                href={p.href}
-                className={`inline-flex items-center gap-2 text-[13px] text-white/90 py-2.5 px-[22px] rounded-3xl team-link-${p.variant}`}
-                style={{ border: '1px solid rgba(255,255,255,0.18)' }}
-              >
-                {p.linkLabel}{' '}
-                <span style={{ color: p.accentColor }}>→</span>
-              </Link>
             </div>
           </div>
         ))}

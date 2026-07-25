@@ -2,6 +2,21 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-07-25
+
+### Changed
+
+- Removed the separate `/michelle` and `/brandon` profile pages, along with their navigation, sitemap, footer, speaking-page, structured-data, and 404-page links.
+- Kept Michelle Lentz and Brandon Carson represented through short bios in the homepage team section.
+- Added a homepage bio link to `https://www.michelleslentz.com` that opens in a new tab so visitors can learn more about Michelle's speaking, writing, and professional background.
+- Removed coaching from the site's visible copy, service list, contact options, metadata, social preview, structured data, speaking topics, terms, and AI-readable `llms.txt` summary.
+- Repositioned Elevate around leadership development, skills strategy, learning strategy, and learning ecosystem transformation.
+
+### Notes
+
+- Brandon's separate coaching site is outside this repository and was not created or linked as part of this update.
+- Historical changelog entries remain unchanged as a record of what the site previously contained.
+
 ## 2026-06-26
 
 ### Added

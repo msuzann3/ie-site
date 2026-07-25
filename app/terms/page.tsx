@@ -37,7 +37,7 @@ export default function TermsPage() {
               Use of the site
             </h2>
             <p>
-              This Site is provided for informational purposes about our consulting and coaching
+              This Site is provided for informational purposes about our consulting and speaking
               services. You agree to use it lawfully and not to misrepresent your identity,
               transmit harmful content, or interfere with the Site&apos;s operation.
             </p>

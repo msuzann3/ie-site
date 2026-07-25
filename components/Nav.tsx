@@ -7,14 +7,12 @@ import { usePathname } from 'next/navigation'
 const NAV_LINKS = [
   { label: 'What we do', href: '/#what-we-do' },
   { label: 'Philosophy', href: '/#philosophy' },
-  { label: 'Michelle', href: '/michelle' },
-  { label: 'Brandon', href: '/brandon' },
+  { label: 'Who we are', href: '/#team' },
   { label: 'Speaking', href: '/speaking' },
 ]
 
 export default function Nav() {
   const pathname = usePathname()
-  const isElevate = pathname.startsWith('/brandon')
   const [open, setOpen] = useState(false)
 
   const close = () => setOpen(false)
@@ -59,11 +57,7 @@ export default function Nav() {
         {/* Desktop CTA */}
         <Link
           href="#contact"
-          className={`hidden md:inline-block text-[13px] font-medium text-white py-[9px] px-5 rounded-3xl transition-colors duration-150 ${
-            isElevate
-              ? 'bg-blue-600 hover:bg-blue-700'
-              : 'bg-emerald hover:bg-emerald-mid'
-          }`}
+          className="hidden md:inline-block text-[13px] font-medium text-white py-[9px] px-5 rounded-3xl transition-colors duration-150 bg-emerald hover:bg-emerald-mid"
         >
           Get in touch
         </Link>
@@ -107,11 +101,7 @@ export default function Nav() {
             <li className="pt-4">
               <Link
                 href="#contact"
-                className={`block text-center text-[14px] font-medium text-white py-3 rounded-[32px] transition-colors duration-150 ${
-                  isElevate
-                    ? 'bg-blue-600 hover:bg-blue-700'
-                    : 'bg-emerald hover:bg-emerald-mid'
-                }`}
+                className="block text-center text-[14px] font-medium text-white py-3 rounded-[32px] transition-colors duration-150 bg-emerald hover:bg-emerald-mid"
                 onClick={close}
               >
                 Get in touch
