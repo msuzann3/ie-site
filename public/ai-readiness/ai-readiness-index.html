@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Innovate + Elevate — AI Readiness Assessment</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAA8CAMAAABik3VtAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACxFBMVEX///8iPHclp1UkPXYlqFQlPnj8/PwkPncmqFX8/v0mp1QjPHgbNXL29vdhb5b7+vn9/v4jPnclO27j5OcZMm4cNG8fOXUmP3i0uMhGV4InqFb7+/wcN3UaNHAcNnMsRHs4S3nj5OgmQHgnQXoVoEcYM3AoqFakq8AkOm0fOXY5S3tyf6EkPXjr8O8jPng1pV8VL2uc0bGlrcEnPnf7/Pwdpk7i4uYZMm0jqFNGVoEhqFIqqlgnpVTJ4NIbNXMhO3YSLGimrcHX2OBhcJb5+fgdpU6d0rHW2N8fp0+YnbNfbpZHWILg4eYqqVij0LUVn0cSK2j7+/shp1Ls8u8lQHk1pl8YMW7k6+iBv5n39vgeo08fOnaXm7Hk5OiBwJiCxJspqlgpm1T6+fonPHBxfZ/J4NEnp1ZOrnMoqFafpbepsMM3Snmjq78aM245THsmO24dpU2f1LMkp1P29fYppVWgp7jp8e3U5dv19fb2+Piyt8cZNHIRK2cVokeAv5dFVYDK4NQdpk8jPXUlq1VkcZUuRXvs8e8epE+gprhPsXMao0yCwZlxfaAdNGumrsJ7vJN4hKI2pmD6/fuWzatbapNSY42/w9CCwpsmrFUcNnPi6uYxpF1VZI8lqFbr6+6ts8OVmrAoQnp7wZSgzrIgN2+WnLFXZ5AcoU1fbZWGwJwpQHgpq1fK4dMqqVcfOnUmPXPH4NB+hqIrPW3///0Lmz2Dv5mJkKdqtIWExJxPX4gvplsqP3O0t8gcMmazuMjj4+jr7O/U1t78+/pxfZudpbcdqE4VpEfI39I2o2AspllgsX8UL28prVj6+fq72sYULWne3+UgOXWjz7QKJGJBUHvy9fRQr3KqzrvEyNQblUgsnld0f53y9vNMW4AzpV7H3tAfpFA/T3uhqL4tnVomPXYwQ3QgmU6tscD69/kXMnBRY40OKWjDGDqdAAAFWGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA1LTEwPC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUhKVElEa1pHQSZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRVd4YmNydlNrJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0JyYW5kb24gQ2Fyc29uJiMzOTtzIFRlYW0mcXVvdDt9PC9BdHRyaWI6RGF0YT4KICAgICA8QXR0cmliOkV4dElkPjkzZTc3M2ZkLTRiNTQtNDViMC05ZmMzLWM2NDNhNDQxMjc3MjwvQXR0cmliOkV4dElkPgogICAgIDxBdHRyaWI6RmJJZD41MjUyNjU5MTQxNzk1ODA8L0F0dHJpYjpGYklkPgogICAgIDxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvQXR0cmliOkFkcz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvJz4KICA8ZGM6dGl0bGU+CiAgIDxyZGY6QWx0PgogICAgPHJkZjpsaSB4bWw6bGFuZz0neC1kZWZhdWx0Jz5mYXZpY29uIC0gMTwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAg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" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="vendor/html2pdf.bundle.min.js"></script>
+<style>
+  :root {
+    --midnight:#0D1B35; --midnight-2:#152849;
+    --emerald:#0B8F68; --emerald-mid:#0D7A59; --emerald-light:#E0F5EE;
+    --azure:#60A5FA; --periwinkle:#93C5FD; --sky:#EFF6FF; --silver:#F8FAFC; --white:#fff;
+    --text-mid:#4B5A6E; --border:rgba(13,27,53,.09); --border-2:rgba(13,27,53,.14);
+    --font-display:'Syne',ui-sans-serif,system-ui,sans-serif;
+    --font-body:'Outfit',ui-sans-serif,system-ui,sans-serif;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; font-family:var(--font-body); font-weight:300; line-height:1.7;
+    color:var(--midnight); background:var(--silver);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:900px; margin:0 auto; padding:36px 22px 56px; }
+
+  h1,h2,h3 { font-family:var(--font-display); color:var(--midnight); margin:0; }
+  h1 { font-size:clamp(30px,4.4vw,44px); font-weight:400; letter-spacing:-1px; line-height:1.1; }
+  h2 { font-size:26px; font-weight:500; letter-spacing:-.5px; }
+  h3 { font-size:18px; font-weight:500; }
+  p { color:var(--text-mid); margin:0; }
+  a { color:var(--emerald); text-decoration:none; }
+  a:hover { color:var(--emerald-mid); text-decoration:underline; }
+  .plus { color:var(--emerald); }
+
+  .eyebrow { font-family:var(--font-body); font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--emerald); }
+
+  .header { text-align:center; margin-bottom:30px; }
+  .header .mark { margin:0 auto 18px; display:block; height:46px; }
+  .subtitle { color:var(--text-mid); font-size:1.02rem; margin-top:10px; }
+
+  .card { background:var(--white); border:.5px solid var(--border); border-radius:16px; box-shadow:0 14px 30px rgba(13,27,53,.06); padding:30px; }
+  .lead { text-align:center; max-width:620px; margin:14px auto 24px; }
+
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:720px){ .grid { grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px){ .grid { grid-template-columns:1fr; } }
+
+  .dim-card { background:var(--silver); border:.5px solid var(--border); border-radius:12px; padding:15px; border-left:4px solid var(--azure); }
+  .dim-head { display:flex; align-items:center; gap:9px; margin-bottom:7px; }
+  .badge-i { width:32px; height:32px; border-radius:9px; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+  .badge-i svg { width:18px; height:18px; }
+  .dim-card h3 { font-size:.92rem; }
+  .dim-card p { font-size:.78rem; line-height:1.5; }
+  .success { background:var(--emerald-light); border-left-color:var(--emerald); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .success h3 { color:var(--emerald-mid); } .success p { color:var(--emerald-mid); }
+
+  .btn { font-family:var(--font-body); border:none; cursor:pointer; font-weight:600; border-radius:24px; transition:.15s; font-size:.95rem; display:inline-flex; align-items:center; gap:8px; }
+  .btn-primary { background:var(--midnight); color:#fff; padding:13px 28px; }
+  .btn-primary:hover { background:var(--midnight-2); }
+  .btn-ghost { background:#fff; color:var(--midnight); border:1px solid var(--border-2); padding:12px 22px; }
+  .btn-ghost:hover { background:var(--silver); }
+  .btn-cta { background:var(--emerald); color:#fff; padding:14px 30px; border-radius:32px; }
+  .btn-cta:hover { background:var(--emerald-mid); color:#fff; text-decoration:none; }
+  .center { text-align:center; }
+
+  .topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px; }
+  .topbar .ttl { display:flex; align-items:center; gap:12px; }
+  .topbar .ttl img { height:26px; }
+  .topbar h1 { font-size:1.3rem; letter-spacing:-.4px; }
+  .pageno { font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--text-mid); white-space:nowrap; }
+  .progress { width:100%; height:8px; background:#e8edf5; border-radius:99px; overflow:hidden; margin-bottom:22px; }
+  .progress > div { height:100%; background:var(--emerald); border-radius:99px; transition:width .35s; }
+
+  .dim-title { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
+  .dim-title .badge-i { width:50px; height:50px; border-radius:13px; }
+  .dim-title .badge-i svg { width:28px; height:28px; }
+  .dim-title p { margin-top:2px; }
+
+  .q { border-bottom:.5px solid var(--border); padding:18px 0; }
+  .q:last-child { border-bottom:none; }
+  .q p { color:var(--midnight); font-weight:500; margin-bottom:14px; }
+  .scale { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .scale .lbl { font-size:.76rem; color:var(--text-mid); }
+  .dots { display:flex; gap:8px; }
+  .dot { width:42px; height:42px; border-radius:99px; border:1.5px solid var(--border-2); background:#fff; color:var(--text-mid); font-family:var(--font-body); font-weight:600; cursor:pointer; transition:.12s; }
+  .dot:hover { border-color:var(--azure); }
+  .dot.sel { background:var(--midnight); border-color:var(--midnight); color:#fff; }
+  .nav { display:flex; justify-content:space-between; margin-top:26px; }
+
+  .score-big { font-family:var(--font-display); font-size:4.2rem; font-weight:500; letter-spacing:-2px; margin:6px 0 2px; }
+  .res-card { background:#fff; border:.5px solid var(--border); border-radius:16px; box-shadow:0 14px 30px rgba(13,27,53,.06); padding:22px; border-left:4px solid var(--azure); }
+  .res-card h3 { display:flex; align-items:center; gap:10px; font-size:1rem; margin-bottom:14px; }
+  .bar { width:100%; height:12px; background:#e8edf5; border-radius:99px; overflow:hidden; }
+  .bar > div { height:100%; border-radius:99px; transition:width .5s; }
+  .pill { background:var(--silver); border:.5px solid var(--border); border-radius:8px; padding:8px 10px; font-size:.8rem; color:var(--text-mid); margin-top:12px; }
+  .legend { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center; }
+  @media (max-width:480px){ .legend { grid-template-columns:1fr; } }
+  .legend .n { font-family:var(--font-display); font-size:1.5rem; font-weight:500; }
+  .legend .lbl { font-size:.82rem; color:var(--text-mid); }
+
+  .cta { background:var(--emerald-light); border:.5px solid rgba(11,143,104,.25); border-radius:16px; padding:26px; margin-top:26px; text-align:center; }
+  .cta h2 { margin-bottom:10px; }
+  .cta .contact { font-size:.85rem; color:var(--text-mid); margin-top:12px; }
+
+  .radar-wrap { display:flex; justify-content:center; margin:6px 0 22px; }
+
+  .next-card { background:var(--midnight); border-left:4px solid var(--emerald); display:flex; flex-direction:column; justify-content:center; }
+  .next-card h3 { color:#fff; margin-bottom:8px; }
+  .next-card p { color:rgba(255,255,255,.6); font-size:.82rem; margin-bottom:14px; }
+
+  .footer { text-align:center; font-size:.72rem; color:var(--text-mid); margin-top:26px; line-height:1.7; }
+  .footer .fmark { height:30px; margin-bottom:12px; opacity:.95; }
+
+  @media print {
+    .btn, .no-print { display:none !important; }
+    body { background:#fff; }
+    .card, .res-card { box-shadow:none; break-inside:avoid; }
+    .wrap { padding:8px 0; }
+  }
+  body, .card, .res-card, .bar > div, .badge-i, .next-card, .cta { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<script>
+/* ---- Brand logo SVGs (typographic, render with Syne) ---- */
+const WORDMARK = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 80" class="mark"><text x="260" y="58" text-anchor="middle" font-family="Syne, sans-serif" font-size="48" font-weight="400" letter-spacing="-1"><tspan fill="#0D1B35">Innovate </tspan><tspan fill="#0B8F68">+</tspan><tspan fill="#0D1B35"> Elevate</tspan></text></svg>';
+const WORDMARK_SM = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 80"><text x="0" y="58" font-family="Syne, sans-serif" font-size="48" font-weight="400" letter-spacing="-1"><tspan fill="#0D1B35">Innovate </tspan><tspan fill="#0B8F68">+</tspan><tspan fill="#0D1B35"> Elevate</tspan></text></svg>';
+const BADGE = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><rect width="64" height="64" rx="14" fill="#0D1B35"></rect><text x="32" y="40" font-family="Syne, sans-serif" font-size="22" font-weight="400" text-anchor="middle" letter-spacing="-0.5"><tspan fill="#FFFFFF">I</tspan><tspan fill="#0B8F68">+</tspan><tspan fill="#FFFFFF">E</tspan></text></svg>';
+
+const ICONS = {
+  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+  exec:'<line x1="3" y1="7" x2="21" y2="7"/><circle cx="9" cy="7" r="2.3"/><line x1="3" y1="17" x2="21" y2="17"/><circle cx="15" cy="17" r="2.3"/>',
+  bulb:'<path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/>',
+  db:'<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+  users:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5"/><path d="M16 6a3 3 0 0 1 0 6"/><path d="M21 20c0-2.4-1.6-4.2-4-4.8"/>',
+  shield:'<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  check:'<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>'
+};
+function svgIcon(name,color){ return '<svg viewBox="0 0 24 24" fill="none" stroke="'+color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ICONS[name]+'</svg>'; }
+
+const dimensions = [
+  { name:"Strategy", short:"Strategy", icon:"target", color:"#3B82F6",
+    description:"Clear AI objectives aligned with business outcomes",
+    questions:[
+      "Our organization has clearly defined AI objectives that align with business outcomes",
+      "We have identified specific workflows—not just isolated tasks—where AI and AI agents will create measurable value",
+      "Leadership actively champions our AI strategy across the organization",
+      "We have allocated appropriate resources and budget for AI initiatives"
+    ]},
+  { name:"Execution", short:"Execution", icon:"exec", color:"#10B981",
+    description:"AI integrated into daily workflows & processes",
+    questions:[
+      "AI tools and agents are actively integrated into our daily workflows",
+      "Employees know how to access, use, and collaborate with available AI systems",
+      "We have clear processes for deploying and scaling new AI solutions",
+      "Our AI initiatives deliver measurable business results"
+    ]},
+  { name:"Innovation", short:"Innovation", icon:"bulb", color:"#F59E0B",
+    description:"Culture that rewards intelligent experimentation",
+    questions:[
+      "Our culture encourages experimentation with new AI technologies, including AI agents",
+      "We have dedicated time and resources for AI innovation projects",
+      "Failure in AI experiments is treated as valuable learning",
+      "Employees are empowered to propose and test AI solutions"
+    ]},
+  { name:"Data Management", short:"Data", icon:"db", color:"#8B5CF6",
+    description:"Clean, accessible, agent-ready data infrastructure",
+    questions:[
+      "Our data is clean, organized, and easily accessible",
+      "We have robust data governance and quality processes",
+      "Data is available in formats suitable for AI models and agents to act on",
+      "We can securely give AI systems real-time access to the data they need"
+    ]},
+  { name:"Enablement & Adoption", short:"Enablement", icon:"users", color:"#EF4444",
+    description:"AI literacy, role-based training & change adoption",
+    questions:[
+      "Employees have received foundational AI literacy training—the basics of what AI can and can't do",
+      "Our people are trained to apply AI to their specific roles and day-to-day work",
+      "We have strong change management practices that drive real adoption, not just rollout",
+      "We track AI adoption and actively support employees who are slower to adapt"
+    ]},
+  { name:"AI Governance & Oversight", short:"Governance", icon:"shield", color:"#14B8A6",
+    description:"Accountability & human oversight for AI agents",
+    questions:[
+      "We have defined clear autonomy boundaries for what AI agents can and cannot do without human approval",
+      "Accountability for AI agent decisions and outcomes is clearly assigned to specific roles",
+      "We have human-in-the-loop checkpoints built into our AI-driven workflows",
+      "We can monitor, audit, and intervene in AI agent actions in production"
+    ]}
+];
+
+const TOTAL = dimensions.length;
+const RESULTS = TOTAL + 1;
+let currentPage = 0;
+let responses = {};
+let orgName = "";
+let userName = "";
+let userEmail = "";
+let submitted = false;
+
+function escAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escHtml(s){ return escAttr(s); }
+function dateStr(){ return new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'}); }
+
+function colorFor(s){ return s>60?'#0B8F68': s>40?'#F59E0B':'#EF4444'; }
+function dimScore(i){
+  let vals=[]; for(let q=0;q<4;q++){ const r=responses[i+'-'+q]; if(r!==undefined) vals.push(r); }
+  if(!vals.length) return 0;
+  return Math.round((vals.reduce((a,b)=>a+b,0)/vals.length)*20);
+}
+
+function buildRadar(scores){
+  const W=440,H=380,cx=W/2,cy=H/2+6,R=130,n=scores.length;
+  const ang=i=>(-90+i*(360/n))*Math.PI/180;
+  const pt=(i,r)=>[cx+r*Math.cos(ang(i)),cy+r*Math.sin(ang(i))];
+  let grid='';
+  [20,40,60,80,100].forEach(level=>{ let pts=[]; for(let i=0;i<n;i++){const[x,y]=pt(i,R*level/100);pts.push(x.toFixed(1)+','+y.toFixed(1));} grid+='<polygon points="'+pts.join(' ')+'" fill="none" stroke="rgba(13,27,53,.10)" stroke-width="1"/>'; });
+  let axes=''; for(let i=0;i<n;i++){const[x,y]=pt(i,R);axes+='<line x1="'+cx+'" y1="'+cy+'" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'" stroke="rgba(13,27,53,.10)" stroke-width="1"/>';}
+  let dataPts=[]; for(let i=0;i<n;i++){const[x,y]=pt(i,R*scores[i]/100);dataPts.push(x.toFixed(1)+','+y.toFixed(1));}
+  const overall=Math.round(scores.reduce((a,b)=>a+b,0)/n); const stroke=colorFor(overall);
+  let verts=''; for(let i=0;i<n;i++){const[x,y]=pt(i,R*scores[i]/100);verts+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4" fill="'+dimensions[i].color+'"/>';}
+  let labels='';
+  for(let i=0;i<n;i++){
+    const[lx,ly]=pt(i,R+26); let anchor='middle'; if(lx<cx-6)anchor='end'; else if(lx>cx+6)anchor='start';
+    labels+='<text x="'+lx.toFixed(1)+'" y="'+ly.toFixed(1)+'" text-anchor="'+anchor+'" font-family="Outfit,sans-serif" font-size="12" font-weight="600" fill="'+dimensions[i].color+'">'+dimensions[i].short+'</text>';
+    const[vx,vy]=pt(i,R*scores[i]/100-14);
+    labels+='<text x="'+vx.toFixed(1)+'" y="'+(vy+4).toFixed(1)+'" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10.5" font-weight="600" fill="#0D1B35">'+scores[i]+'</text>';
+  }
+  return '<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:440px">'+grid+axes+'<polygon points="'+dataPts.join(' ')+'" fill="'+stroke+'2e" stroke="'+stroke+'" stroke-width="2.5"/>'+verts+labels+'</svg>';
+}
+
+function render(){
+  const app=document.getElementById('app');
+  if(currentPage===0) app.innerHTML=welcomeHTML();
+  else if(currentPage>=1&&currentPage<=TOTAL) app.innerHTML=dimensionHTML(currentPage-1);
+  else app.innerHTML=resultsHTML();
+  window.scrollTo(0,0);
+}
+
+function welcomeHTML(){
+  let cards='';
+  dimensions.forEach(d=>{
+    cards+='<div class="dim-card" style="border-left-color:'+d.color+'"><div class="dim-head"><span class="badge-i" style="background:'+d.color+'1f">'+svgIcon(d.icon,d.color)+'</span><h3>'+d.name+'</h3></div><p>'+d.description+'</p></div>';
+  });
+  cards+='<div class="dim-card success"><span class="badge-i" style="background:#0B8F6820">'+svgIcon('check','#0B8F68')+'</span><h3>Success Requires</h3><p>High performance across ALL dimensions</p></div>';
+  const inputStyle='width:100%;padding:11px 14px;border:1px solid var(--border-2);border-radius:10px;font-family:var(--font-body);font-size:15px;color:var(--midnight);outline:none';
+  const labelStyle='display:block;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-mid);margin-bottom:6px';
+  return ''
+    + '<div class="header">'+WORDMARK
+    +   '<div class="eyebrow">Organizational AI Readiness</div>'
+    +   '<h1 style="margin-top:8px">AI Readiness Assessment</h1>'
+    +   '<p class="subtitle">Updated for 2026 — readiness for the age of AI agents</p>'
+    + '</div>'
+    + '<div class="card">'
+    +   '<h2 class="center">Assess your organization’s AI readiness</h2>'
+    +   '<p class="lead">This assessment evaluates your organization across six critical dimensions of AI readiness. Each section contains 4 questions rated on a scale of 1–5.</p>'
+    +   '<div class="grid">'+cards+'</div>'
+    +   '<div class="center" style="margin-top:26px">'
+    +     '<div style="max-width:340px;margin:0 auto 16px;text-align:left">'
+    +       '<label style="'+labelStyle+'">Your name</label>'
+    +       '<input id="nameInput" type="text" value="'+escAttr(userName)+'" oninput="userName=this.value" placeholder="Jane Smith" style="'+inputStyle+';margin-bottom:12px"/>'
+    +       '<label style="'+labelStyle+'">Your email</label>'
+    +       '<input id="emailInput" type="email" value="'+escAttr(userEmail)+'" oninput="userEmail=this.value" placeholder="jane@company.com" style="'+inputStyle+';margin-bottom:12px"/>'
+    +       '<label style="'+labelStyle+'">Organization name (optional)</label>'
+    +       '<input id="orgInput" type="text" value="'+escAttr(orgName)+'" oninput="orgName=this.value" placeholder="e.g., Acme Health" style="'+inputStyle+'"/>'
+    +     '</div>'
+    +     '<button class="btn btn-primary" onclick="startAssessment()">Start Assessment &rarr;</button>'
+    +   '</div>'
+    + '</div>'
+    + footerHTML();
+}
+
+function dimensionHTML(i){
+  const d=dimensions[i]; let qs='';
+  d.questions.forEach((q,qi)=>{
+    let dots=''; for(let v=1;v<=5;v++){ const sel=responses[i+'-'+qi]===v?' sel':''; dots+='<button class="dot'+sel+'" onclick="answer('+i+','+qi+','+v+')">'+v+'</button>'; }
+    qs+='<div class="q"><p>'+q+'</p><div class="scale"><span class="lbl">Strongly Disagree</span><div class="dots">'+dots+'</div><span class="lbl">Strongly Agree</span></div></div>';
+  });
+  return ''
+    + '<div class="topbar"><div class="ttl">'+BADGE.replace('width="64" height="64"','width="26" height="26"')+'<h1>AI Readiness Assessment</h1></div><span class="pageno">'+currentPage+' / '+TOTAL+'</span></div>'
+    + '<div class="progress"><div style="width:'+((currentPage/TOTAL)*100)+'%"></div></div>'
+    + '<div class="card">'
+    +   '<div class="dim-title"><span class="badge-i" style="background:'+d.color+'1f">'+svgIcon(d.icon,d.color)+'</span><div><h2>'+d.name+'</h2><p>'+d.description+'</p></div></div>'
+    +   qs
+    +   '<div class="nav"><button class="btn btn-ghost" onclick="go('+(currentPage-1)+')">&larr; Previous</button><button class="btn btn-primary" onclick="go('+(currentPage+1)+')">'+(currentPage===TOTAL?'View Results':'Next')+' &rarr;</button></div>'
+    + '</div>';
+}
+
+function resultsHTML(){
+  const scores=dimensions.map((_,i)=>dimScore(i));
+  const avg=Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+  let cards='';
+  dimensions.forEach((d,i)=>{
+    const s=scores[i],c=colorFor(s); const tag=s>60?'Strong performance':s>40?'Moderate readiness':'Needs attention';
+    cards+='<div class="res-card" style="border-left-color:'+d.color+'"><h3><span class="badge-i" style="background:'+d.color+'1f">'+svgIcon(d.icon,d.color)+'</span>'+d.name+'</h3>'
+      +'<div style="display:flex;justify-content:space-between;font-size:.82rem;color:var(--text-mid);margin-bottom:4px"><span>Your score</span><span style="font-weight:600;color:var(--midnight)">'+s+'%</span></div>'
+      +'<div class="bar"><div style="width:'+s+'%;background:'+c+'"></div></div><div class="pill">'+tag+'</div></div>';
+  });
+  cards+='<div class="res-card next-card"><h3>Next steps</h3><p>Focus on your lowest-scoring dimensions first for maximum impact.</p><button class="btn btn-ghost" style="justify-content:center" onclick="reset()">&#8635; Clear &amp; Restart</button></div>';
+  return ''
+    + '<div class="header" style="margin-bottom:18px">'+WORDMARK
+    +   '<div class="eyebrow" style="margin-top:14px">Your Results</div>'
+    +   (userName ? '<p style="margin-top:6px;font-size:.95rem;color:var(--midnight);font-weight:500">Prepared for '+escHtml(userName)+(orgName?' &middot; '+escHtml(orgName):'')+'</p>' : (orgName ? '<p style="margin-top:6px;font-size:.95rem;color:var(--midnight);font-weight:500">Prepared for '+escHtml(orgName)+'</p>' : ''))
+    +   '<p class="subtitle" style="margin-top:'+(userName||orgName?'2px':'8px')+';font-size:.85rem">'+dateStr()+'</p>'
+    +   '<div class="score-big" style="color:'+colorFor(avg)+'">'+avg+'%</div>'
+    +   '<p class="subtitle" style="margin-top:0">Overall AI Readiness Score</p>'
+    +   '<div class="no-print" style="margin-top:16px"><button class="btn btn-primary" onclick="downloadPDF(this)">Download your results (PDF) &darr;</button></div></div>'
+    + '<div class="card" style="margin-bottom:24px"><h2 class="center">Your readiness profile</h2><div class="radar-wrap">'+buildRadar(scores)+'</div></div>'
+    + '<div class="grid">'+cards+'</div>'
+    + '<div class="card" style="margin-top:24px"><h2 class="center">Understanding your results</h2><div class="legend">'
+    +   '<div><div class="n" style="color:#0B8F68">60%+</div><div class="lbl">Ready for AI transformation</div></div>'
+    +   '<div><div class="n" style="color:#D97706">40–59%</div><div class="lbl">Building readiness</div></div>'
+    +   '<div><div class="n" style="color:#DC2626">Under 40%</div><div class="lbl">Foundation needed</div></div>'
+    + '</div></div>'
+    + '<div class="cta"><h2>Ready to accelerate your AI journey?</h2>'
+    +   '<p>To take a deeper dive into your AI readiness and change management approach, reach out to Michelle at <a href="https://www.innovate-elevate.ai" target="_blank" rel="noopener">Innovate+Elevate Strategies</a>.</p>'
+    +   '<div style="margin-top:16px"><a class="btn btn-cta" href="https://go.innovate-elevate.ai/meetwithmichelle" target="_blank" rel="noopener">Book a call &rarr;</a> <button class="btn btn-ghost no-print" onclick="downloadPDF(this)">&#8595; Download PDF</button></div>'
+    + '</div>'
+    + footerHTML();
+}
+
+function footerHTML(){
+  return '<div class="footer">'+BADGE.replace('width="64" height="64"','width="30" height="30" class="fmark"')+'<br>'
+    + 'Framework based on the <a href="https://knowledge.wharton.upenn.edu/article/whats-your-companys-ai-readiness-quotient/" target="_blank" rel="noopener">AI Readiness Quotient (AI-RQ) by Scott A. Snyder</a>, Wharton School, '
+    + 'with agentic-era updates informed by the <a href="https://ai.wharton.upenn.edu/" target="_blank" rel="noopener">Wharton AI &amp; Analytics Initiative</a> (<em>The Age of Co-Intelligence</em>, 2026).<br>'
+    + 'Data Management, Enablement &amp; Adoption, and AI Governance questions &copy; 2026, '
+    + '<a href="https://www.innovate-elevate.ai" target="_blank" rel="noopener">Innovate+Elevate Strategies, LLC</a></div>';
+}
+
+/* ---------- Formspree notification ---------- */
+function startAssessment(){ go(1); }
+
+function sendToFormspree(scores){
+  const avg=Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+  fetch('https://formspree.io/f/mzdnynqn',{
+    method:'POST',
+    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    body:JSON.stringify({
+      name: userName,
+      email: userEmail,
+      organization: orgName||'(not provided)',
+      overall_score: avg+'%',
+      scores: dimensions.map((d,i)=>d.name+': '+scores[i]+'%').join(', ')
+    })
+  }).catch(()=>{});
+}
+
+/* ---------- Branded PDF report ---------- */
+function buildReportHTML(scores){
+  const avg=Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+  const C='#0D1B35', MUTED='#4B5A6E', EM='#0B8F68';
+  let rows='';
+  dimensions.forEach((d,i)=>{
+    const s=scores[i], c=colorFor(s); const tag=s>60?'Strong performance':s>40?'Moderate readiness':'Needs attention';
+    rows+='<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:0.5px solid rgba(13,27,53,.10)">'
+      +'<span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:'+d.color+'1f;flex:0 0 auto">'+svgIcon(d.icon,d.color)+'</span>'
+      +'<div style="flex:1 1 auto;min-width:0">'
+        +'<div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:'+C+'"><span>'+d.name+'</span><span>'+s+'%</span></div>'
+        +'<div style="width:100%;height:8px;background:#e8edf5;border-radius:99px;margin-top:5px;overflow:hidden"><div style="width:'+s+'%;height:8px;background:'+c+';border-radius:99px"></div></div>'
+      +'</div>'
+      +'<span style="font-size:11px;color:'+MUTED+';width:120px;text-align:right;flex:0 0 auto">'+tag+'</span>'
+    +'</div>';
+  });
+  return ''
+    + '<div style="font-family:Outfit,sans-serif;color:'+C+';padding:28px 34px 24px;background:#fff">'
+    +   '<div style="text-align:center;margin-bottom:12px">'
+    +     '<div style="font-family:Syne,sans-serif;font-size:28px;font-weight:400;letter-spacing:-0.8px;line-height:1.1;color:#0D1B35">Innovate <span style="color:#0B8F68">+</span> Elevate</div>'
+    +     '<div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:'+EM+';margin-top:10px">AI Readiness Results</div>'
+    +     (orgName?'<div style="font-size:15px;font-weight:500;margin-top:6px">Prepared for '+escHtml(orgName)+'</div>':'')
+    +     '<div style="font-size:12px;color:'+MUTED+';margin-top:'+(orgName?'2px':'6px')+'">'+dateStr()+'</div>'
+    +   '</div>'
+    +   '<div style="display:flex;align-items:center;justify-content:center;gap:28px;margin:6px 0 4px">'
+    +     '<div style="text-align:center"><div style="font-family:Syne,sans-serif;font-size:54px;font-weight:500;letter-spacing:-2px;line-height:1;color:'+colorFor(avg)+'">'+avg+'%</div><div style="font-size:12px;color:'+MUTED+';margin-top:4px">Overall AI Readiness Score</div></div>'
+    +     '<div>'+buildRadar(scores).replace('max-width:440px','max-width:300px').replace('width="100%"','width="300"')+'</div>'
+    +   '</div>'
+    +   '<div style="margin-top:8px">'+rows+'</div>'
+    +   '<div style="display:flex;justify-content:space-between;margin-top:14px;font-size:11px;color:'+MUTED+'">'
+    +     '<span><strong style="color:'+EM+'">60%+</strong> Ready for AI transformation</span>'
+    +     '<span><strong style="color:#D97706">40–59%</strong> Building readiness</span>'
+    +     '<span><strong style="color:#DC2626">Under 40%</strong> Foundation needed</span>'
+    +   '</div>'
+    +   '<div style="margin-top:18px;padding:12px 14px;border:0.5px solid rgba(11,143,104,.24);border-radius:14px;background:rgba(11,143,104,.055);text-align:center;line-height:1.45">'
+    +     '<div style="font-family:Syne,sans-serif;font-size:17px;font-weight:400;letter-spacing:-0.3px;color:'+C+'">Ready to go deeper?</div>'
+    +     '<div style="font-size:11px;font-weight:600;color:'+EM+';margin-top:4px">michelle@innovate-elevate.ai &middot; innovate-elevate.ai &middot; go.innovate-elevate.ai/meetwithmichelle</div>'
+    +   '</div>'
+    +   '<div style="margin-top:10px;padding-top:8px;border-top:0.5px solid rgba(13,27,53,.10);text-align:center;font-size:8.5px;color:#7A8698;line-height:1.35">'
+    +     'Framework based on the AI Readiness Quotient (AI-RQ) by Scott A. Snyder, Wharton School, with agentic-era updates informed by the Wharton AI &amp; Analytics Initiative (The Age of Co-Intelligence, 2026). '
+    +     'Data Management, Enablement &amp; Adoption, and AI Governance questions &copy; 2026 Innovate + Elevate Strategies, LLC.'
+    +   '</div>'
+    + '</div>';
+}
+
+async function downloadPDF(btn){
+  const scores=dimensions.map((_,i)=>dimScore(i));
+  const safeOrg = orgName ? '-'+orgName.trim().replace(/[^a-z0-9]+/gi,'_').replace(/^_|_$/g,'') : '';
+  const filename = 'AI-Readiness-Results'+safeOrg+'.pdf';
+  const el=document.createElement('div');
+  el.innerHTML=buildReportHTML(scores);
+  el.style.cssText='position:absolute;left:0;top:0;width:720px;background:#fff;z-index:2147483646;';
+  const report=el.firstElementChild;
+  if(report){ report.style.width='720px'; report.style.minHeight='1px'; }
+  const cover=document.createElement('div');
+  cover.style.cssText='position:fixed;inset:0;z-index:2147483647;background:#F8FAFC;display:flex;align-items:center;justify-content:center;font-family:Outfit,sans-serif;color:#0D1B35;font-weight:500;';
+  cover.textContent='Preparing your branded PDF…';
+  document.body.appendChild(el);
+  document.body.appendChild(cover);
+  const label = btn ? btn.innerHTML : '';
+  if(btn){ btn.disabled=true; btn.innerHTML='Preparing PDF…'; }
+  try{
+    if(!window.html2pdf) throw new Error('lib missing');
+    if(document.fonts && document.fonts.ready){ try{ await document.fonts.ready; }catch(e){} }
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    el.style.height = Math.max(el.scrollHeight, report ? report.scrollHeight : 0, 1) + 'px';
+    await html2pdf().set({
+      margin:[18,18,18,18],
+      filename:filename,
+      image:{type:'jpeg',quality:0.98},
+      html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff'},
+      jsPDF:{unit:'pt',format:'letter',orientation:'portrait'},
+      pagebreak:{mode:['css','legacy']}
+    }).from(report || el).save();
+  }catch(e){
+    el.remove();
+    cover.remove();
+    window.print(); // offline / library-blocked fallback
+  }finally{
+    if(el.isConnected) el.remove();
+    if(cover.isConnected) cover.remove();
+    if(btn){ btn.disabled=false; btn.innerHTML=label; }
+  }
+}
+
+function go(p){
+  if(p>=0&&p<=RESULTS){
+    if(p===RESULTS&&!submitted){
+      submitted=true;
+      sendToFormspree(dimensions.map((_,i)=>dimScore(i)));
+    }
+    currentPage=p; render();
+  }
+}
+function answer(i,q,v){ responses[i+'-'+q]=v; render(); }
+function reset(){ responses={}; orgName=""; userName=""; userEmail=""; submitted=false; currentPage=0; render(); }
+
+render();
+</script>
+</body>
+</html>
