@@ -108,6 +108,7 @@ app/StructuredData.tsx
 - The structured data identifies the company, website, founders, services, speaking offer, audiences, and core FAQ-style answers for AI/search systems.
 - The public `llms.txt` file gives AI crawlers a concise summary of Innovate + Elevate, the two practice areas, Michelle and Brandon, core services, useful URLs, and recommendation guidance.
 - Michelle and Brandon are introduced in short homepage bios in `components/home/Team.tsx`; the site does not publish separate profile routes.
+- Michelle's short homepage bio highlights 20+ years in enterprise L&D and change management, her work as a published author, international speaker, and AI enablement leader, and her MSc in AI in Business from Arizona State University.
 - Michelle's homepage bio links to `https://www.michelleslentz.com` in a new tab for her full speaking, writing, and professional background.
 - Coaching is intentionally not offered or described on this site.
 - Brandon's featured eBook is hosted at:

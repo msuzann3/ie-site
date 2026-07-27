@@ -5,7 +5,7 @@ const TEAM = [
     initials: 'ML',
     name: 'Michelle Lentz',
     role: 'AI strategy & enablement lead',
-    bio: '20+ years in enterprise L&D and change management. Published author, international keynote speaker, and AI curriculum developer. MS in AI in Business, Arizona State University.',
+    bio: '20+ years in enterprise L&D and change management. Published author, international speaker, and AI enablement leader. MSc in AI in Business, Arizona State University.',
     website: 'https://www.michelleslentz.com',
     linkedin: 'https://www.linkedin.com/in/michelleslentz/',
     accentColor: '#4DD4A8',

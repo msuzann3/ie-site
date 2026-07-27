@@ -2,6 +2,13 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-07-27
+
+### Changed
+
+- Updated Michelle's short homepage bio to describe her as a published author, international speaker, and AI enablement leader.
+- Changed the degree abbreviation in the homepage bio from “MS” to “MSc in AI in Business, Arizona State University.”
+
 ## 2026-07-25
 
 ### Changed
