@@ -5,6 +5,7 @@ import Services from '@/components/home/Services'
 import AIReadiness from '@/components/home/AIReadiness'
 import Philosophy from '@/components/home/Philosophy'
 import Team from '@/components/home/Team'
+import Newsletter from '@/components/home/Newsletter'
 import Contact from '@/components/home/Contact'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturedDownload />
       <Duality />
       <Services />
+      <Newsletter />
       <AIReadiness />
       <Philosophy />
       <Team />

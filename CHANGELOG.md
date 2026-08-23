@@ -2,6 +2,17 @@
 
 All notable project updates should be recorded here so both laptops and both Codex sessions have the same working context.
 
+## 2026-08-23
+
+### Added
+
+- Added a “Subscribe to the newsletter” link beside “Get in touch” in the desktop navigation and as a clearly labeled item in the mobile menu.
+- Added a homepage feature before the AI Readiness Assessment introducing Michelle's Flow & Function newsletter, its “AI in working order.” tagline, a short description, and a direct subscription link.
+
+### Notes
+
+- Newsletter links open `https://flowandfunction.beehiiv.com` in a new tab.
+
 ## 2026-07-27
 
 ### Changed

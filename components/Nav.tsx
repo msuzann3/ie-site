@@ -54,13 +54,23 @@ export default function Nav() {
           })}
         </ul>
 
-        {/* Desktop CTA */}
-        <Link
-          href="#contact"
-          className="hidden md:inline-block text-[13px] font-medium text-white py-[9px] px-5 rounded-3xl transition-colors duration-150 bg-emerald hover:bg-emerald-mid"
-        >
-          Get in touch
-        </Link>
+        {/* Desktop actions */}
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="https://flowandfunction.beehiiv.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] text-white/65 hover:text-white transition-colors duration-150 whitespace-nowrap"
+          >
+            Subscribe to the newsletter
+          </a>
+          <Link
+            href="/#contact"
+            className="text-[13px] font-medium text-white py-[9px] px-5 rounded-3xl transition-colors duration-150 bg-emerald hover:bg-emerald-mid whitespace-nowrap"
+          >
+            Get in touch
+          </Link>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -98,9 +108,20 @@ export default function Nav() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://flowandfunction.beehiiv.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3.5 text-[15px] text-white/65 border-b border-white/[0.07] hover:text-white transition-colors"
+                onClick={close}
+              >
+                Subscribe to the newsletter
+              </a>
+            </li>
             <li className="pt-4">
               <Link
-                href="#contact"
+                href="/#contact"
                 className="block text-center text-[14px] font-medium text-white py-3 rounded-[32px] transition-colors duration-150 bg-emerald hover:bg-emerald-mid"
                 onClick={close}
               >
